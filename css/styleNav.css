@@ -1,7 +1,25 @@
 /* Base styles for the navigation bar */
 
 :root {
-    --navbarHeight: 3em;  /* Define the variable */
+    --navbarHeight: 5em;  /* Define the variable */
+    --buttonBackGround: #9EBDFF;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Ensures the body takes full width */
+    height: 100%; /* Optional: Ensures the body takes full height */
+    box-sizing: border-box; /* Makes sure padding and border are included in the width and height */
+}
+
+.logo {
+    width: 175px; /* Adjust width as needed */
+    height: 100px; /* Adjust height as needed */
+    background-image: url('/images/logo.png');
+    background-size: contain; /* This will make sure that your image is scaled to fit within the dimensions */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image in the element */
 }
 
 .navbar {
@@ -9,21 +27,22 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    /* background-color: #f0f0f0; */
-    /* https://cssgradient.io/ */
-    /* background: linear-gradient(180deg, rgba(153,134,95,1) 0%, rgba(255,224,158,1) 50%); */
-    /* background: linear-gradient(180deg, rgba(153,134,95,1) 100%, rgba(255,224,158,1) 100%); */
     height: var(--navbarHeight);  /* Use the variable */
     position: relative;
+    margin: 0;
+    box-sizing: border-box; /* Include padding in width calculation */
 }
-
 
 .nav-links {
     list-style: none;
     display: flex;
-    justify-content: space-between; /* This will space out the children */
+    justify-content: center; /* This will space out the children */
     width: 100%; /* Ensures the container fills its parent, adjust as needed */
 }
+/* 
+.nav-links .nav-sublinks li a {
+    align-items: center; 
+} */
 
 .nav-links > div:first-child,
 .nav-links > div:nth-child(2) {
@@ -34,7 +53,8 @@
 }
 
 .nav-links li {
-    padding: 0 15px;
+    padding: 10px 15px;
+    align-items: center;
 }
 
 .nav-links a {
@@ -45,35 +65,57 @@
 .dropdown-content {
     display: none; /* Hide dropdown links by default */
     position: absolute;
-    /* background-color: #f9f9f9; */
     /* https://cssgradient.io/ */
     background: linear-gradient(180deg, rgba(153,134,95,1) 0%, rgba(255,224,158,1) 50%);;
-    margin-top: calc(var(--navbarHeight)/ 2); /* margin as navbar's height/2
-    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    margin-top: calc(var(--navbarHeight)/2.6); /* margin as navbar's height/2 */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     /* z-index: 1; */
     left: 0;
     right: 0;
 }
 
 .nav-links li:hover .dropdown-content {
-    display: flex; /* Show dropdown on click */
-    flex-direction: column; /* Stack horizontally by default */
+    display: flex; 
+    flex-direction: column; 
     justify-content: space-around;
-    width: 100%; /* Full width of the nav bar */
-    height: calc(var(--navbarHeight) * 2);
-    align-items: center;
+    width: 100%; 
+    height: calc(var(--navbarHeight) * 1);
+    align-items: center;    
+    border-top: 0.5px solid black;
 }
 .nav-links li:hover .dropdown-content > div:first-child {
     display: flex; /* Show dropdown on click */
     flex-direction: row; /* Stack horizontally by default */
-    justify-content: space-around;
+    justify-content: center;
     width: 100%; /* Full width of the nav bar */
     align-items: center;
+    gap: 8em;
+}
+
+.nav-links li:hover .dropdown-content > div:nth-child(2) {
+    display: flex; /* Show dropdown on click */
+    flex-direction: row; /* Stack horizontally by default */
+    justify-content: center;
+    width: 100%; /* Full width of the nav bar */
+    align-items: baseline;
+    gap: 2em;
+}
+.nav-links li:hover .dropdown-content > div:nth-child(2) a {
+    text-decoration: underline;
+}
+
+.nav-button button {
+    background: var(--buttonBackGround);
+    width: 100px;
+    height: inherit;
+    box-shadow: none;
+    outline: none;
 }
 
 .burger {
     display: none;
     cursor: pointer;
+    background: var(--buttonBackGround);
 }
 
 .burger span {
