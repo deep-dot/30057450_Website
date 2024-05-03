@@ -1,0 +1,120 @@
+/* Base styles for the navigation bar */
+
+:root {
+    --navbarHeight: 3em;  /* Define the variable */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    /* background-color: #f0f0f0; */
+    /* https://cssgradient.io/ */
+    /* background: linear-gradient(180deg, rgba(153,134,95,1) 0%, rgba(255,224,158,1) 50%); */
+    /* background: linear-gradient(180deg, rgba(153,134,95,1) 100%, rgba(255,224,158,1) 100%); */
+    height: var(--navbarHeight);  /* Use the variable */
+    position: relative;
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-between; /* This will space out the children */
+    width: 100%; /* Ensures the container fills its parent, adjust as needed */
+}
+
+.nav-links > div:first-child,
+.nav-links > div:nth-child(2) {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1; /* Allows the child to grow and use available space */
+    gap: 10px;
+}
+
+.nav-links li {
+    padding: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+}
+
+.dropdown-content {
+    display: none; /* Hide dropdown links by default */
+    position: absolute;
+    /* background-color: #f9f9f9; */
+    /* https://cssgradient.io/ */
+    background: linear-gradient(180deg, rgba(153,134,95,1) 0%, rgba(255,224,158,1) 50%);;
+    margin-top: calc(var(--navbarHeight)/ 2); /* margin as navbar's height/2
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    /* z-index: 1; */
+    left: 0;
+    right: 0;
+}
+
+.nav-links li:hover .dropdown-content {
+    display: flex; /* Show dropdown on click */
+    flex-direction: column; /* Stack horizontally by default */
+    justify-content: space-around;
+    width: 100%; /* Full width of the nav bar */
+    height: calc(var(--navbarHeight) * 2);
+    align-items: center;
+}
+.nav-links li:hover .dropdown-content > div:first-child {
+    display: flex; /* Show dropdown on click */
+    flex-direction: row; /* Stack horizontally by default */
+    justify-content: space-around;
+    width: 100%; /* Full width of the nav bar */
+    align-items: center;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: #333;
+}
+
+.nav-links.active {
+    display: flex; /* or any other display type depending on layout */
+    flex-direction: column; /* stacks the links vertically */
+}
+/* Larger screens: No change needed here if the base is designed for the largest breakpoint */
+
+/* Medium screens (1026px) */
+@media (max-width: 1026px) {
+    .nav-links li {
+        padding: 0 10px; /* slightly reduce padding */
+    }
+}
+
+/* Tablet screens (768px) */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* hide links for burger menu */
+    }
+
+    .burger {
+        display: block; /* show burger menu */
+    }
+}
+
+/* Mobile screens (375px) */
+@media (max-width: 375px) {
+    .navbar {
+        padding: 5px 10px; /* adjust padding */
+    }
+
+    .burger span {
+        height: 2px; /* thinner burger lines */
+    }
+}
