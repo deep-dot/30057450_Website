@@ -1,3 +1,29 @@
+
+
+.navsection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: var(--navbarHeight);
+    margin: 0;
+    box-sizing: border-box; 
+    /* background: linear-gradient(180deg, rgba(153,134,95,1) 100%, rgba(255,224,158,1) 15%); */
+}
+.navbar {    
+    width: var(--pageWidth);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    height: var(--navbarHeight);  
+    position: relative;
+    margin: 0;
+}
+
 .navbar .logo {
     width: 10vw;  
     height: var(--navbarHeight); 
@@ -7,17 +33,6 @@
     background-position: center; 
     min-width: 100px; 
     max-width: 175px; 
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 50px;
-    height: var(--navbarHeight);  
-    position: relative;
-    margin: 0;
-    box-sizing: border-box; 
 }
 
 .nav-links {

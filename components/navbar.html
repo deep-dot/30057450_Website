@@ -5,49 +5,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deedeveloper</title>
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/styleNav.css">
 </head>
 
 <body>
     <!-- Navigation Markup -->
-    <nav class="navbar">
-        <div class="logo">
-        </div>
-        <ul class="nav-links">
-            <div class="nav-sublinks">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#">Gallery</a></li>
-                <!-- <li><a href="#">More</a></li> -->
-                <li class="more"> <!-- Dropdown Trigger -->
-                    <a href="#">More</a>
-                    <div class="dropdown-content"> <!-- Dropdown Content -->
-                        <div>
-                            <a href="#">☢️ Testimonial</a>
-                            <a href="#">✈️ Travel</a>
-                            <a href="#">💳 InternShip</a>
-                            <a href="#">✅ MemberShip</a>
-                        </div>
-                        <div class="contact">
-                            <p>Get In Touch</p>
-                            <a href="#">Contact Me</a>
-                        </div>
-                    </div>
-                </li>
+    
+    <section class="navsection">
+        <nav class="navbar">
+            <!-- <div class="navbody"> -->
+            <div class="logo">
             </div>
-            <div class="nav-button">
-                <button onclick="location.href='more.html';">Contact</button>
-                <button onclick="location.href='more.html';">About Me</button>
-            </div>
-        </ul>
-        <button class="burger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </nav>
+            <ul class="nav-links">
+                <div class="nav-sublinks">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <!-- <li><a href="#">More</a></li> -->
+                    <li class="more"> <!-- Dropdown Trigger -->
+                        <a href="#">More</a>
+                        <div class="dropdown-content"> <!-- Dropdown Content -->
+                            <div>
+                                <a href="#">☢️ Testimonial</a>
+                                <a href="travel.html">✈️ Travel</a>
+                                <a href="#">💳 InternShip</a>
+                                <a href="#">✅ MemberShip</a>
+                            </div>
+                            <div class="contact">
+                                <p>Get In Touch</p>
+                                <a href="#">Contact Me</a>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+                <div class="nav-button">
+                    <button>Contact</button>
+                    <button>About Me</button>
+                </div>
+            </ul>
+            <button class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        <!-- </div> -->
+        </nav>
+    </section>
 
-    <script src="/js/scriptNav.js"></script>
+        <script src="/js/scriptNav.js"></script>
+
 </body>
 
 </html>

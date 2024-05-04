@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/styleNav.css">
+    <link rel="stylesheet" href="/css/styleTravel.css">
+    <link rel="stylesheet" href="/css/styleFooter.css">
+</head>
+
+<body>
+    <section class="navsection">
+        <nav class="navbar">
+            <!-- <div class="navbody"> -->
+            <div class="logo">
+            </div>
+            <ul class="nav-links">
+                <div class="nav-sublinks">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <!-- <li><a href="#">More</a></li> -->
+                    <li class="more"> <!-- Dropdown Trigger -->
+                        <a href="#">More</a>
+                        <div class="dropdown-content"> <!-- Dropdown Content -->
+                            <div>
+                                <a href="#">☢️ Testimonial</a>
+                                <a href="travel.html">✈️ Travel</a>
+                                <a href="#">💳 InternShip</a>
+                                <a href="#">✅ MemberShip</a>
+                            </div>
+                            <div class="contact">
+                                <p>Get In Touch</p>
+                                <a href="#">Contact Me</a>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+                <div class="nav-button">
+                    <button>Contact</button>
+                    <button>About Me</button>
+                </div>
+            </ul>
+            <button class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        <!-- </div> -->
+        </nav>
+    </section>
+
+    <script src="/js/scriptNav.js"></script>
+
+
+    <section class="main-section body-content" id="travelPage">
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="/images/HomeBackGroundImage.png" alt="Description of image 1" class="carousel-image active">
+                <img src="/images/profilepic.png" alt="Description of image 1" class="carousel-image active">
+                <img src="/images/logo.png" alt="Description of image 1" class="carousel-image active">
+                <!-- Add more images as needed -->
+            </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var currentIndex = 0;
+            var images = document.querySelectorAll('.carousel-image');
+            var prevButton = document.querySelector('.prev');
+            var nextButton = document.querySelector('.next');
+
+            function showImage(index) {
+                images.forEach(image => image.classList.remove('active'));
+                images[index].classList.add('active');
+            }
+
+            prevButton.addEventListener('click', function () {
+                currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+                showImage(currentIndex);
+            });
+
+            nextButton.addEventListener('click', function () {
+                currentIndex = (currentIndex + 1) % images.length;
+                showImage(currentIndex);
+            });
+        });
+    </script>
+
+
+   
+<footer>
+    <div class="footer-section section1">
+        <div class="Footerlogo">
+            <!-- Replace src with your logo image path -->
+            <!-- <img src="logo.png" alt="Logo"> -->
+        </div>
+        <div class="links">
+            <a href="#link1">About me</a>
+            <a href="#link2">Contact</a>
+            <a href="#link3">Services</a>
+            <a href="#link4">FAQ</a>
+        </div>
+        <div class="social-icons">
+            <!-- Add icons or images for social media links -->
+            <a href="#facebook"><img src="/images/icons/Facebook.png" width="15px" height="25px"
+                    alt="Facebook"></a>
+            <a href="#twitter"><img src="/images/icons/lInkedIn.png" width="15px" height="25px"
+                    alt="Twitter"></a>
+            <a href="#instagram"><img src="/images/icons/YouTube.png" width="15px" height="25px"
+                    alt="Instagram"></a>
+        </div>
+    </div>
+    <div class="footer-section section2">
+        <div class="copyright">
+            &copy; 2024 Deedeveloper.com
+        </div>
+        <div class="legal">
+            <a href="#privacy">Privacy Policy</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+</html>

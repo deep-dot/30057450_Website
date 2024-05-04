@@ -6,7 +6,7 @@ html {
 }
 .main-section {
     width: 100%; /* Full width by default */
-    max-width: 1440px; /* Maximum width to control layout on large screens */
+    max-width: var(--pageWidth); /* Maximum width to control layout on large screens */
     margin: 0 auto; /* Center the container horizontally */
     padding: 0px; /* Default padding */
 }
@@ -44,7 +44,9 @@ html {
 
 
 :root {
+    --pageWidth: 1440px;
     --navbarHeight: 5em;  
+    --footerHeight: 10rem;
     --buttonBackGround: #9EBDFF;
     --buttonHover: #FFE09E;
 
@@ -75,6 +77,7 @@ html {
 
 
 html, body {
+    position: relative;
     max-height: 100vh;
     margin: 0;
     padding: 0;

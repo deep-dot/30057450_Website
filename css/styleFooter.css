@@ -1,6 +1,11 @@
 
 
 footer {
+    display: flex;    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     color: var(--textColor);
     /* background: linear-gradient(0deg, rgba(153,134,95,1) 0%, rgba(255,224,158,1) 100%);; */
     background-color: rgba(255,224,158,0.50);
@@ -9,10 +14,11 @@ footer {
 }
 
 .footer-section {
-    display: flex;
+    display: flex;    
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: var(--pageWidth);
     margin-bottom: 20px;
 }
 
