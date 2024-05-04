@@ -1,0 +1,86 @@
+
+
+:root {
+    --navbarHeight: 5em;  
+    --buttonBackGround: #9EBDFF;
+
+    --headingSize: 36px;
+    --headingFamily: 'Raleway', sans-serif;
+    --headingColor: #0462A6;
+    --headingWeight: 600;
+
+    --heading2Size: 28px;
+    --heading2Family: 'Raleway', sans-serif;
+    --heading2Color: #0462A6;
+    --heading2Weight: 500;
+
+    --heading3Size: 24px;
+    --heading3Family: 'Raleway', sans-serif;
+    --heading3Color: #0462A6;
+    --heading3Weight: 400;
+
+    --textSize: 20px;
+    --textFamily: 'Open Sans', sans-serif;
+    --textColor: #000000;
+    --textWeight: 300;
+
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Ensures the body takes full width */
+    height: 100%; /* Optional: Ensures the body takes full height */
+    box-sizing: border-box; /* Makes sure padding and border are included in the width and height */
+}
+
+.body-content {
+    transition: var(--navbarHeight) 0.3s ease; /* Smooth transition for padding adjustment */
+}
+
+h1 {
+    color: var(--headingColor);
+    font-family: var(--headingFamily);
+    font-size: var(--headingSize);
+    font-weight: var(--headingWeight);
+}
+
+h2 {
+    color: var(--heading2Color);
+    font-family: var(--heading2Family);
+    font-size: var(--heading2Size);
+    font-weight: var(--heading2Weight);
+}
+
+h3 {
+    color: var(--heading3Color);
+    font-family: var(--heading3Family);
+    font-size: var(--heading3Size);
+    font-weight: var(--heading3Weight);
+}
+
+p {
+    color: var(--textColor);
+    font-family: var(--textFamily);
+    font-size: var(--textSize);
+    font-weight: var(--textWeight);
+}
+
+a, button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-family: var(--textFamily);
+    color: var(--textColor);
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+button {
+    background-color: var(--buttonBackGround);
+}
+
+button:hover, a:hover {
+    background-color: #0056b3;
+}

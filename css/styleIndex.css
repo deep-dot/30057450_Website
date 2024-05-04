@@ -1,39 +1,7 @@
 
-:root {
-    --navbarHeight: 5em;  /* Define the variable */
-    --buttonBackGround: #9EBDFF;
-
-    --headingSize: 36px;
-    --headingFamily: 'Raleway', sans-serif;
-    --headingColor: #0462A6;
-    --headingWeight: 600;
-
-    --heading2Size: 28px;
-    --heading2Family: 'Raleway', sans-serif;
-    --heading2Color: #0462A6;
-    --heading2Weight: 500;
-
-    --heading3Size: 24px;
-    --heading3Family: 'Raleway', sans-serif;
-    --heading3Color: #0462A6;
-    --heading3Weight: 400;
-
-    --textSize: 20px;
-    --textFamily: 'Open Sans', sans-serif;
-    --textColor: #000000;
-    --textWeight: 300;
-
-}
-
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
 
 .main-section {
     display: flex;
-    height: 100vh; /* Full viewport height */
     position: relative;
 }
 
@@ -58,24 +26,7 @@ body, html {
     flex-direction: column;
     position: relative; /* Required to stack above the pseudo-element */
 }
-/* 
-.left-section{
-    background-color: cadetblue;
-} */
 
-.left-section .content h1 {
-    color: var(--headingColor);
-    font-family: var(--headingFamily);
-    font-size: var(--headingSize);
-    font-weight: var(--headingWeight);
-}
-
-.left-section .content p {
-    color: var(--textColor);
-    font-family: var(--textFamily);
-    font-size: var(--textSize);
-    font-weight: var(--textWeight);
-}
 .right-section {
     flex: 1; /* Takes up full space available in its parent container */
     display: flex;
@@ -89,27 +40,6 @@ body, html {
     align-items: center; /* Center content vertically */
     justify-content: center; /* Center content horizontally */
     padding: 20px; /* Add padding for better spacing of the content */
-}
-/* 
-.right-section .top-image {
-    background-color: rgb(139, 85, 15); /* Specific background for the top image area 
-} */
-/* 
-.right-section .bottom-text {
-    background-color: burlywood; /* Specific background for the bottom text area 
-} */
-.right-section .bottom-text h2 {
-    color: var(--heading2Color);
-    font-family: var(--heading2Family);
-    font-size: var(--heading2Size);
-    font-weight: var(--heading2Weight);
-}
-
-.right-section .bottom-text h3 {
-    color: var(--heading3Color);
-    font-family: var(--heading3Family);
-    font-size: var(--heading3Size);
-    font-weight: var(--heading3Weight);
 }
 
 .content, .text-content {
@@ -129,26 +59,4 @@ body, html {
     display: flex;
     align-items: center; /* Centers vertically in the div */
     justify-content: center; /* Centers horizontally */
-}
-
-.bottom-text .text-content p {
-    color: var(--textColor);
-    font-family: var(--textFamily);
-    font-size: var(--textSize);
-    font-weight: var(--textWeight);
-}
-a, button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: var(--buttonBackGround);
-    font-family: var(--textFamily);
-    color: var(--textColor);
-    text-decoration: none;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover, a:hover {
-    background-color: #0056b3;
 }
