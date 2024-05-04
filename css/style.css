@@ -1,30 +1,78 @@
 
 
+/* Base style */
+html {
+    font-size: 18px;
+}
+.main-section {
+    width: 100%; /* Full width by default */
+    max-width: 1440px; /* Maximum width to control layout on large screens */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 0px; /* Default padding */
+}
+
+/* Adjustments for smaller devices below the max-width of the container */
+@media (max-width: 1024px) {
+    html {
+        font-size: 16px;
+    }
+    .main-section {
+        padding: 15px; /* Slightly reduced padding for smaller devices */
+    }
+}
+
+/* Adjustments for even smaller devices */
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+    .main-section {
+        padding: 10px; /* Even smaller padding for mobile devices */
+    }
+}
+
+/* Further adjustments if necessary */
+@media (max-width: 480px) {
+    html {
+        font-size: 12px;
+    }
+    .main-section {
+        padding: 5px; /* Minimal padding for very small screens */
+    }
+}
+
+
+
 :root {
     --navbarHeight: 5em;  
     --buttonBackGround: #9EBDFF;
+    --buttonHover: #FFE09E;
 
-    --headingSize: 36px;
+    --headingSize: clamp(1.75rem, 5vw, 2.25rem); /* h1 size */
     --headingFamily: 'Raleway', sans-serif;
     --headingColor: #0462A6;
     --headingWeight: 600;
 
-    --heading2Size: 28px;
+    --heading2Size: clamp(1.5rem, 4vw, 2rem); /* h2 size */
     --heading2Family: 'Raleway', sans-serif;
     --heading2Color: #0462A6;
     --heading2Weight: 500;
 
-    --heading3Size: 24px;
+    --heading3Size: clamp(1.25rem, 3.5vw, 1.75rem); /* h3 size */
     --heading3Family: 'Raleway', sans-serif;
     --heading3Color: #0462A6;
     --heading3Weight: 400;
 
-    --textSize: 20px;
+    --textSize: clamp(1rem, 2.5vw, 1.25rem);
     --textFamily: 'Open Sans', sans-serif;
     --textColor: #000000;
     --textWeight: 300;
-
 }
+
+* {
+    box-sizing: border-box; /* Makes sure padding and borders are included in the total width and height */
+}
+
 
 html, body {
     max-height: 100vh;
@@ -32,7 +80,7 @@ html, body {
     padding: 0;
     width: 100%; /* Ensures the body takes full width */
     height: 100%; /* Optional: Ensures the body takes full height */
-    box-sizing: border-box; /* Makes sure padding and border are included in the width and height */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
     background-color: rgba(255,224,158,0.10);
 }
 
@@ -68,7 +116,7 @@ p {
     font-weight: var(--textWeight);
 }
 
-a, button {
+a {
     display: inline-block;
     padding: 10px 20px;
     font-family: var(--textFamily);
@@ -80,9 +128,21 @@ a, button {
 }
 
 button {
+    /* width: 100%;  */
+    max-width: 200px; 
+    /* height: 2.5em;  */
+    padding: 0.5em 1em; 
+    font-size: 1rem; 
+    font-family: var(--textFamily);
     background-color: var(--buttonBackGround);
+    color: var(--textColor); 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    box-sizing: border-box; 
+    transition: var(--buttonHover) 0.3s; 
 }
 
 button:hover, a:hover {
-    background-color: #0056b3;
+    background-color: var(--buttonHover); 
 }

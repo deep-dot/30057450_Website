@@ -12,12 +12,12 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('/images/HomeBackGroundImage.png'); /* Adjust the path as needed */
-    background-size: contain; /* Ensures the image is scaled to fit within the dimensions */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-image: url('/images/HomeBackGroundImage.png'); 
+    background-size: contain; 
+    background-repeat: no-repeat; 
     background-position: center;
-    opacity: 0.15; /* Sets the opacity to 15% */
-    z-index: -1; /* Ensures the pseudo-element is behind the content */
+    opacity: 0.15; 
+    z-index: -1; 
 }
 
 .left-section, .right-section {
@@ -61,28 +61,22 @@
     justify-content: center; /* Centers horizontally */
 }
 
-/* Media Queries */
-@media (max-width: 1026px) { /* For desktop and below */
-    .main-section, .left-section, .right-section {
-        flex-direction: row; /* Adjust layout for smaller desktop */
-    }
-
-    .content, .text-content {
-        width: 90%; /* Increase width within container */
-    }
-}
-
 @media (max-width: 768px) { /* For tablet and below */
     .main-section, .left-section, .right-section {
         flex-direction: column; /* Stack elements vertically for smaller screens */
     }
 
-    .top-image img, .bottom-text {
+    .top-image img {
+        width: 50%;
+        height: auto; /* Maintain aspect ratio */
+    } 
+    
+    .bottom-text {
         width: 100%; /* Adjust image and text box width for better fit */
     }
 }
 
-@media (max-width: 375px) { /* For mobile */
+@media (max-width: 480px) { /* For mobile */
     .content, .text-content {
         width: 100%; /* Use full width for mobile view */
     }
