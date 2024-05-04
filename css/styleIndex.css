@@ -60,3 +60,35 @@
     align-items: center; /* Centers vertically in the div */
     justify-content: center; /* Centers horizontally */
 }
+
+/* Media Queries */
+@media (max-width: 1026px) { /* For desktop and below */
+    .main-section, .left-section, .right-section {
+        flex-direction: row; /* Adjust layout for smaller desktop */
+    }
+
+    .content, .text-content {
+        width: 90%; /* Increase width within container */
+    }
+}
+
+@media (max-width: 768px) { /* For tablet and below */
+    .main-section, .left-section, .right-section {
+        flex-direction: column; /* Stack elements vertically for smaller screens */
+    }
+
+    .top-image img, .bottom-text {
+        width: 100%; /* Adjust image and text box width for better fit */
+    }
+}
+
+@media (max-width: 375px) { /* For mobile */
+    .content, .text-content {
+        width: 100%; /* Use full width for mobile view */
+    }
+
+    .top-image img {
+        width: 80%; /* Adjust image size for mobile */
+        height: auto; /* Maintain aspect ratio */
+    }
+}

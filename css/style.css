@@ -27,11 +27,13 @@
 }
 
 html, body {
+    max-height: 100vh;
     margin: 0;
     padding: 0;
     width: 100%; /* Ensures the body takes full width */
     height: 100%; /* Optional: Ensures the body takes full height */
     box-sizing: border-box; /* Makes sure padding and border are included in the width and height */
+    background-color: rgba(255,224,158,0.10);
 }
 
 .body-content {
