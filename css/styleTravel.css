@@ -1,21 +1,39 @@
 
+.main-section h1,
+.main-section p {
+    text-align: center;
+}
+
 .carousel {
     position: relative;
+    align-items: center;
     width: 100%; 
-    height: 70vh; /* Set a fixed height for the carousel */
-    overflow: hidden; /* Hide overflowed parts of images */
+    height: 55vh; /* Set a fixed height for the carousel */
+    overflow: hidden; /* Hide overflowed parts of images */    
 }
 
 .carousel-images img {
-    width: 70%; 
-    height: 40vh; 
+    /* .carousel-images .carousel-image { */
+    width: 50%; 
+    height: 70%; 
     max-height: 100%; 
     position: absolute;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); /* Adjust based on top/left centers */
+    transform: translate(50%, 0%); /* Adjust based on top/left centers */
     display: none; 
-    /* background-color: bisque; */
+    background-color: bisque;
+}
+
+.description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border: 1px solid grey;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    color: var(--textColor);
+    font-size: var(--textSize);
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .carousel-image.active {
@@ -25,7 +43,7 @@
 button.prev,
 button.next {
     position: absolute;
-    top: 50%;
+    top: 40%;
     transform: translateY(-50%);
     background-color: rgba(0,0,0,0.5);
     color: white;
@@ -37,15 +55,43 @@ button.next {
 }
 
 button.prev {
-    left: 10px;
+    left: 10%;
 }
 
 button.next {
-    right: 10px;
+    right: 10%;
 }
-/* 
-footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-} */
+
+@media (max-width: 768px) {
+
+    .carousel-images img {
+        width: 80%;
+        transform: translate(12.5%, 0%)
+    }
+
+    button.prev {
+        left: 5%;
+    }
+    
+    button.next {
+        right: 5%;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .carousel-images img {
+        width: 100%;
+        transform: translate(0%, 0%)
+    }
+
+    button.prev {
+        left: 5px;
+    }
+    
+    button.next {
+        right: 5px;
+    }
+
+}

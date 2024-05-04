@@ -7,6 +7,7 @@
         var navsection = document.querySelector('.navsection');
         var bodyContent = document.querySelector('.body-content');
         navsection.style.background = 'linear-gradient(180deg, rgba(153,134,95,1) 0%, rgba(255,224,158,1) 50%)';
+        // console.log('navbar===',navbar);
         navbar.style.background = 'linear-gradient(180deg, rgba(153,134,95,1) 0%, rgba(255,224,158,1) 50%)';
         var height
         dropdown.style.display = 'none';
