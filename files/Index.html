@@ -8,32 +8,34 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/styleNav.css">
     <link rel="stylesheet" href="/css/styleIndex.css">
+    <link rel="stylesheet" href="/css/testimonials.css">
     <link rel="stylesheet" href="/css/styleFooter.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap">
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function(){
+      $("#navbar").load("/components/navbar.html");
+    });
+  </script> -->
 </head>
 
 <body>
-    <!-- <section class="navsection"></section>    
-    <script>
-        fetch('/components/navbar.html')
-            .then(response => response.text())
-            .then(html => document.querySelector('.navsection').innerHTML = html)
-            .catch(error => console.error('There was a problem with the fetch operation:', error));;
-    </script> -->
     
+    <!-- <div id="navbar"></div> -->
     <section class="navsection">
         <nav class="navbar">
             <div class="logo">
             </div>
             <ul class="nav-links">
                 <div class="nav-sublinks">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Skills</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li class="more"> 
+                    <li><a href="index.html">Home</a></li>
+                <li><a href="travel.html">Skills</a></li>
+                <li><a href="testimonials.html">Gallery</a></li>
+                 <li class="more"> 
                         <a href="#">More</a>
                         <div class="dropdown-content"> 
                             <div>
-                                <a href="#">☢️ Testimonial</a>
+                                <a href="testimonials.html">☢️ Testimonial</a>
                                 <a href="travel.html">✈️ Travel</a>
                                 <a href="#">💳 InternShip</a>
                                 <a href="#">✅ MemberShip</a>
@@ -58,7 +60,6 @@
         </nav>
     </section>
     <script src="/js/scriptNav.js"></script>
-
 
     <section class="main-section body-content">
         <div class="left-section">
@@ -85,11 +86,7 @@
             </div>
         </div>
     </section>
-
     <script src="/js/script.js"></script>
-
-
-
 
     <footer>
         <div class="footer-section section1">

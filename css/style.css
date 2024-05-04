@@ -55,17 +55,17 @@ html {
     --headingColor: #0462A6;
     --headingWeight: 600;
 
-    --heading2Size: clamp(1.5rem, 4vw, 2rem); /* h2 size */
+    --heading2Size: clamp(1.50rem, 3vw, 1.75rem); /* h2 size */
     --heading2Family: 'Raleway', sans-serif;
     --heading2Color: #0462A6;
     --heading2Weight: 500;
 
-    --heading3Size: clamp(1.25rem, 3.5vw, 1.75rem); /* h3 size */
+    --heading3Size: clamp(1.10rem, 2.25vw, 1.25rem); /* h3 size */
     --heading3Family: 'Raleway', sans-serif;
     --heading3Color: #0462A6;
     --heading3Weight: 400;
 
-    --textSize: clamp(1rem, 2.5vw, 1.25rem);
+    --textSize: clamp(1rem, 2vw, 1.15rem);
     --textFamily: 'Open Sans', sans-serif;
     --textColor: #000000;
     --textWeight: 300;
@@ -75,6 +75,9 @@ html {
     box-sizing: border-box; /* Makes sure padding and borders are included in the total width and height */
 }
 
+body {
+    font-family: 'Open Sans', sans-serif;
+}
 
 html, body {
     position: relative;

@@ -44,7 +44,7 @@
 
 .content, .text-content {
     margin: auto;
-    text-align: left;
+    text-align: center;
     width: 80%; /* Adjust width as needed */
 }
 

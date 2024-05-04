@@ -11,7 +11,7 @@
     height: var(--navbarHeight);
     margin: 0;
     box-sizing: border-box; 
-    /* background: linear-gradient(180deg, rgba(153,134,95,1) 100%, rgba(255,224,158,1) 15%); */
+    background: linear-gradient(180deg, rgba(153,134,95,1) 0%, rgba(255,224,158,1) 50%);
 }
 .navbar {    
     width: var(--pageWidth);
@@ -22,6 +22,7 @@
     height: var(--navbarHeight);  
     position: relative;
     margin: 0;
+    background: linear-gradient(180deg, rgba(153,134,95,1) 0%, rgba(255,224,158,1) 50%);
 }
 
 .navbar .logo {
@@ -67,7 +68,7 @@
 }
 
 .nav-links .dropdown-content {
-    display: flex;
+    display: none;
     flex-direction: column; 
     width: 100%; 
     align-items: center;    
