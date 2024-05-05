@@ -127,20 +127,19 @@
     flex-direction: column;
 }
 
-@media (max-width: 1026px) {
-.logo {
-    width: 8vw; /* Smaller percentage on larger screens */
-}
-}
 
-@media (max-width: 1026px) {
+@media (min-width: 768px) and (max-width: 1026px) {
+
+    .logo {
+        width: 8vw; /* Smaller percentage on larger screens */
+    }
     .nav-links li {
         padding: 0 10px; 
     }
 }
 
 /* Tablet screens (768px) */
-@media (max-width: 768px) {
+@media (min-width: 480px) and (max-width: 768px) {
 
     .logo {
         width: 15vw; /* Larger percentage on smaller screens */
@@ -156,8 +155,7 @@
     }
 }
 
-/* Mobile screens (375px) */
-@media (max-width: 375px) {
+@media (max-width: 479px) {
     .navbar {
         padding: 5px 10px; 
     }

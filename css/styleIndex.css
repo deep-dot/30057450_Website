@@ -42,10 +42,20 @@
     padding: 20px; /* Add padding for better spacing of the content */
 }
 
+.content {
+    box-shadow: 0px 8px 32px 0px rgba(0,0,0,0.2);
+}
+
+.content:hover{
+    background-color: #FFE09E;
+    opacity: 0.6;
+}
+
 .content, .text-content {
     margin: auto;
     text-align: center;
     width: 80%; /* Adjust width as needed */
+    padding: 20px;
 }
 
 .top-image img {
