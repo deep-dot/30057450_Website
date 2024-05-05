@@ -1,0 +1,64 @@
+/* Styles for membership page */
+.container {
+    min-height: 75vh;
+      max-width: var(--pageWidth);
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    
+    .membership-cards {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    
+    .card {
+      width: calc(33.33% - 20px);
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      padding: 15px;
+      background-color: #FFE09E;
+    }
+  
+    .card img {
+      width: 4em;
+      height: 4em;
+    }
+  
+    .card .user-info {
+      display: flex;
+      flex-direction: row;
+      justify-content:flex-start;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .load-more {
+      text-align: center;
+      margin-top: 30px;
+    }
+    
+    @media (max-width: 1024) {
+      
+    }
+  
+    @media (max-width: 768) {
+  
+    }
+  
+    @media (max-width: 480px) {
+      .membership-cards {
+          flex-direction: column;
+          justify-content: center;
+        }
+        .card {
+          width: 90%;
+        }
+    }
