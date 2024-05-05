@@ -5,13 +5,14 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    position: relative;
+    position: sticky;
     top: 0;
-    left: 0;
+    z-index: 10;
     height: var(--navbarHeight);
     margin: 0;
     box-sizing: border-box; 
     background: linear-gradient(180deg, rgba(153,134,95,1) 0%, rgba(255,224,158,1) 50%);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 .navbar {    
     width: var(--pageWidth);
