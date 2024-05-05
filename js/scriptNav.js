@@ -1,15 +1,25 @@
-
 document.addEventListener('DOMContentLoaded', function () {
     const burger = document.getElementById('burger-menu');
     const navLinks = document.querySelector('.nav-links');
+    var navbar = document.querySelector('.navbar');
+    var dropdown = document.querySelector('.more .dropdown-content');
+    var bodyContent = document.querySelector('.body-content');
 
     burger.addEventListener('click', function() {
-        // Toggle the 'active' class on the nav-links
         navLinks.classList.toggle('active');
-        });
+        
+        if (navLinks.classList.contains('active')) {            
+            navLinks.style.width = '100%'; 
+            navLinks.style.left = '0'; 
+        } else {
+            navLinks.style.width = '';
+            navLinks.style.left = '';
+        }
     });
 
-    
+});
+
+
     document.addEventListener('DOMContentLoaded', function() {
         var more = document.querySelector('.more > a');
         var dropdown = document.querySelector('.more .dropdown-content');

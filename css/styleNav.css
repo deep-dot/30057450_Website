@@ -27,7 +27,7 @@
 }
 
 .navbar .logo {
-    width: 10vw;  
+    width: 25vw;  
     height: var(--navbarHeight); 
     background-image: url('/images/logo.png');
     background-size: contain; 
@@ -112,49 +112,83 @@
     display: none;
     cursor: pointer;
     background: var(--buttonBackGround);
+    padding: 4px;
 }
 
 .burger span {
     display: block;
-    width: 25px;
+    width: 6vw;
     height: 3px;
     margin: 5px;
     background-color: #333;
 }
 
-.nav-links.active {
+/* .nav-links.active {
     display: flex; 
     flex-direction: column;
-}
-
+} */
 
 @media (min-width: 768px) and (max-width: 1026px) {
 
-    .logo {
-        width: 8vw; /* Smaller percentage on larger screens */
+    .navbar .logo {
+        width: 20vw; 
     }
     .nav-links li {
         padding: 0 10px; 
     }
 }
 
-/* Tablet screens (768px) */
-@media (min-width: 480px) and (max-width: 768px) {
+
+@media (max-width: 768px) {
 
     .logo {
-        width: 15vw; /* Larger percentage on smaller screens */
-        min-width: 75px; /* Smaller absolute minimum on small screens */
+        width: 20vw; 
     }
 
     .nav-links {
         display: none; 
     }
 
+    .navbar {
+        padding: 5px;
+    }
+
+    .nav-links.active {
+        display: flex; 
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the left */
+        width: 100%; /* Optional: Adjust according to your design needs */
+        position: absolute;
+        /* background-color: #FFE09E;  */
+        background: linear-gradient(180deg, rgba(153,134,95,1) 0%, rgba(255,224,158,1) 50%);
+        top: 100%; /* Start from the bottom of the navbar */
+        left: 0; /* Align to the left */
+        z-index: 10; /* Make sure it's above other content */
+        padding: 20px;
+        margin: 0;
+    }
+
+    .nav-links.active .dropdown-content {
+        background: none;
+        position: relative;    
+    }
+    .nav-links.active .dropdown-content > div:first-child {
+        flex-direction: column; 
+        align-items: flex-start;
+        padding: 0 0 0 40px;
+        gap: 1em;
+    }
+
+    .nav-links.active .nav-sublinks {
+        flex-direction: column;
+        gap: 5px
+    }
+
     .burger {
         display: block; 
     }
 }
-
+/* 
 @media (max-width: 479px) {
     .navbar {
         padding: 5px 10px; 
@@ -163,4 +197,4 @@
     .burger span {
         height: 2px; 
     }
-}
+} */
