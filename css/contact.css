@@ -1,0 +1,127 @@
+
+.container {    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.main-contact-section {
+    max-width: var(--pageWidth);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.container .section1 {
+    flex-direction: column;
+}
+
+.container .section2 {
+    flex-direction: row;
+}
+
+.main-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.subsection1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-right: 20px;
+}
+
+.subsection2 img {
+    display: block;
+    width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    background-color: var(--buttonBackGround);
+    color: var(--textColor);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.checkbox {
+    margin-top: 10px;
+}
+
+.checkbox label {
+    margin-left: 5px;
+}
+
+.success {
+    padding: 10px;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.error {
+    padding: 10px;
+    background-color: #f44336; /* Red */
+    color: white;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .container {
+        min-height: 70vh;
+    }
+
+    .main-contact-section .section2 {
+        flex-direction: column;
+    }
+
+    .main-contact-section .section2 img {
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .container {
+        min-height: 75vh;
+    }
+
+    .main-contact-section{
+        padding: 0 10px;
+    }
+
+    .main-contact-section .section2 {
+        flex-direction: column;
+    }
+
+    .main-contact-section .section2 img {
+        display: none;
+    }
+
+}

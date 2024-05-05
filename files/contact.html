@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/styleNav.css">
-    <link rel="stylesheet" href="/css/styleFooter.css">
+    <link rel="stylesheet" href="/css/contact.css">
 </head>
+
 <body>
     <section class="navsection">
         <nav class="navbar">
@@ -48,7 +50,48 @@
     </section>
     <script src="/js/scriptNav.js"></script>
 
-    <div><h1>Contact</h1></div>
+    <section class="container">
+        <div class="main-contact-section">
+        <!-- First Section -->
+        <div class="section1">
+            <h1 class="main-heading">Contact Us</h1>
+            <p>This is a short blurb about contacting us. Feel free to drop us a message using the form below!</p>
+        </div>
+
+        <!-- Second Section -->
+        <div class="section2">
+            <!-- Subsection 1 -->
+            <div class="subsection1">
+                <h2>Leave a Message</h2>
+                <p>Fill out the form with your name, email, and a brief message.</p>
+                <form action="#" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <input type="submit" value="Send">
+
+                    <div class="checkbox">
+                        <input type="checkbox" id="subscribe" name="subscribe">
+                        <label for="subscribe">Subscribe to our newsletter</label>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Subsection 2 -->
+            <div class="subsection2">
+                <img src="/images/contactus.png" alt="Decorative Image">
+            </div>
+
+        </div>
+    </div>
+    </section>
+    <script src="/js/contact.js"></script>
 
     <footer>
         <div class="footer-section section1">
@@ -64,10 +107,8 @@
             </div>
             <div class="social-icons">
                 <!-- Add icons or images for social media links -->
-                <a href="#facebook"><img src="/images/icons/Facebook.png" width="15px" height="25px"
-                        alt="Facebook"></a>
-                <a href="#twitter"><img src="/images/icons/lInkedIn.png" width="15px" height="25px"
-                        alt="Twitter"></a>
+                <a href="#facebook"><img src="/images/icons/Facebook.png" width="15px" height="25px" alt="Facebook"></a>
+                <a href="#twitter"><img src="/images/icons/lInkedIn.png" width="15px" height="25px" alt="Twitter"></a>
                 <a href="#instagram"><img src="/images/icons/YouTube.png" width="15px" height="25px"
                         alt="Instagram"></a>
             </div>
@@ -82,4 +123,5 @@
         </div>
     </footer>
 </body>
+
 </html>
