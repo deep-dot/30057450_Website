@@ -76,7 +76,8 @@ html {
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 html, body {
@@ -189,14 +190,6 @@ footer {
     margin-bottom: 20px;
     gap: 2em;
 }
-.section1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 20px;
-    gap: 2em;
-}
 
 .Footerlogo {
     width: 10vw;  
@@ -221,24 +214,15 @@ footer {
     width: 25px; /* Adjust size as needed */
 }
 
-/* Responsive adjustments */
-@media (max-width: 1025px) {
-    .footer-section {
-        flex-direction: column;
-        justify-content: space-around;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1025px) {
-    .footer-section {
-        flex-direction: column;
-        justify-content: space-around;
-    }
-}
 
 @media (max-width: 767px) {
     .footer-section {
         flex-direction: column;
-        justify-content: space-around;
     }
+
+.section1,
+.section2 {
+    margin-bottom: 0px;
+    gap: 0em;
+}
 }

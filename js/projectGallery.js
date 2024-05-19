@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     var currentIndex = 0;
     var images = document.querySelectorAll('.carousel-image');
+    console.log('images==',images);
     var prevButton = document.querySelector('.prev');
     var nextButton = document.querySelector('.next');
     const descriptions = document.querySelectorAll('.description');
