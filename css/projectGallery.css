@@ -146,13 +146,12 @@
   }
 
   .carousel {
-   
-
-    width: 60vw;
+    width: 80vw;
     height: 50vh;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+    margin-bottom: 10px;
   }
   
   .carousel > ul {
@@ -214,4 +213,31 @@
   
   .carousel-button.next {
     right: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+
+    .carousel {
+        width: 80vw;
+        height: 70vh;
+      }
+
+  }
+
+  @media (max-width: 468px) {
+    
+    .carousel {
+        width: 100vw;
+        height: 50vh;
+      }
+  }
+
+
+  @media (min-height: 400px) and (max-height: 800px) {
+
+    .carousel {
+        width: 100vw;
+        height: 35vh;
+      }
+
   }
