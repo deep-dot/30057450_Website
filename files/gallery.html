@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="/css/projectGallery.css">
     <link rel="stylesheet" href="/css/styleFooter.css">
 </head>
+
 <body>
     <section class="navsection">
         <nav class="navbar">
@@ -49,42 +51,73 @@
     </section>
     <script src="/js/scriptNav.js"></script>
 
-    <section class="projectGallerySection body-content" id="projectGalleryPage">
-        <h1 style="align-items: center;">Project Gallery</h1>
-        <p>Explore our impressive collection of work and events.</p>
+    <!-- <section class="projectGallerySection body-content" id="projectGalleryPage">
+        <div class="projectGalleryHeader">
+            <h1>Project Gallery</h1>
+            <p>Explore our impressive collection of work and events.</p>
+        </div>
         <div class="carousel">
-            <!-- <div class="carousel-images"> -->
-                <div class="carousel-item">
-                    <img src="/images/foodDeliveryApp.png" alt="Description of image 1"
-                        class="carousel-image active">
+            <ul>
+                <li class="carousel-item">
+                    <img src="/images/foodDeliveryApp.png" alt="Description of image 1" class="carousel-image active">
                     <p class="description"> 1Description for Image 1Description for Image 1Description for Image 1</p>
-                </div>
-                <div class="carousel-item">
+                </li>
+                <li class="carousel-item">
                     <img src="/images/ecommerce.png" alt="Description of image 1" class="carousel-image active">
                     <p class="description">Description for Image 2</p>
-                </div>
-                <div class="carousel-item">
+                </li>
+                <li class="carousel-item">
                     <img src="/images/WF.png" alt="Description of image 1" class="carousel-image active">
-                    <p class="description">WageFigurer is a mobile application designed to streamline the financial management of cabbies, by allowing them to easily calculate and save mileage records, expenses, and net-paying reports. </p>
-                </div>
-                <div class="carousel-item">
+                    <p class="description">WageFigurer is a mobile application designed to streamline the financial
+                        management of cabbies, by allowing them to easily calculate and save mileage records, expenses,
+                        and
+                        net-paying reports. </p>
+                </li>
+                <li class="carousel-item">
                     <img src="/images/deedeveloper.png" alt="Description of image 1" class="carousel-image active">
-                    <p class="description">Deedeveloper.com is a well designed, professional freelance development platform showcasing the expertise and services of a developer. </p>
-                </div>
-                <div class="carousel-item">
+                    <p class="description">Deedeveloper.com is a well designed, professional freelance development
+                        platform
+                        showcasing the expertise and services of a developer. </p>
+                </li>
+                <li class="carousel-item">
                     <img src="/images/cabBooking.png" alt="Description of image 1" class="carousel-image active">
                     <p class="description">My upcoming project.</p>
-                </div>
-                <div class="carousel-item">
+                </li>
+                <li class="carousel-item">
                     <img src="/images/dietingApp.png" alt="Description of image 1" class="carousel-image active">
-                    <p class="description">The make it fit program is the ultimate non-restrictive, flexble dieting, weight loss program.</p>
-                </div>
-                
-            <!-- </div> -->
-            <button class="prev">&#10094;</button>
-            <button class="next">&#10095;</button>
+                    <p class="description">The make it fit program is the ultimate non-restrictive, flexble dieting,
+                        weight
+                        loss program.</p>
+                </li>
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+            </ul>
         </div>
-    </section>
+    </section> -->
+    <section aria-label="Newest Photos">
+        <div class="projectGalleryHeader">
+            <h1>Project Gallery</h1>
+            <p>Explore our impressive collection of work and events.</p>
+        </div>
+        <div class="carousel" data-carousel>
+          <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
+          <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
+          <ul data-slides>
+            <li class="slide" data-active>
+              <img src="https://source.unsplash.com/78A265wPiO4" alt="Nature Image #1">
+              <p class="description">Description for Image 1</p>
+            </li>
+            <li class="slide">
+              <img src="https://source.unsplash.com/eOpewngf68w" alt="Nature Image #2">
+              <p class="description">Description for Image 2</p>
+            </li>
+            <li class="slide">
+              <img src="https://source.unsplash.com/ndN00KmbJ1c" alt="Nature Image #3">
+              <p class="description">Description for Image 3</p>
+            </li>
+          </ul>
+        </div>
+      </section>
     <script src="/js/projectGallery.js"></script>
 
     <footer>
@@ -101,10 +134,8 @@
             </div>
             <div class="social-icons">
                 <!-- Add icons or images for social media links -->
-                <a href="#facebook"><img src="/images/icons/Facebook.png" width="15px" height="25px"
-                        alt="Facebook"></a>
-                <a href="#twitter"><img src="/images/icons/lInkedIn.png" width="15px" height="25px"
-                        alt="Twitter"></a>
+                <a href="#facebook"><img src="/images/icons/Facebook.png" width="15px" height="25px" alt="Facebook"></a>
+                <a href="#twitter"><img src="/images/icons/lInkedIn.png" width="15px" height="25px" alt="Twitter"></a>
                 <a href="#instagram"><img src="/images/icons/YouTube.png" width="15px" height="25px"
                         alt="Instagram"></a>
             </div>
@@ -119,4 +150,5 @@
         </div>
     </footer>
 </body>
+
 </html>

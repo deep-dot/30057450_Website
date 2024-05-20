@@ -128,7 +128,7 @@
     flex-direction: column;
 } */
 
-@media (min-width: 768px) and (max-width: 1026px) {
+@media (max-width: 1026px) {
 
     .navbar .logo {
         width: 20vw; 
@@ -138,8 +138,15 @@
     }
 }
 
+@media (min-width: 768px) {
 
-@media (max-width: 768px) {
+    .navsection .navbar {
+        padding: 5px;
+    }
+
+}
+
+@media (max-width: 480px) {
 
     .logo {
         width: 20vw; 

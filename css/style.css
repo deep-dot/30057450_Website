@@ -159,16 +159,16 @@ button:hover, a:hover {
 
 /* FOOTER */
 footer {
-    position: relative;
+    position: absolute;
     bottom:0;
+    left:0;
     display: flex;    
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    color: var(--textColor);
     /* background: linear-gradient(0deg, rgba(153,134,95,1) 0%, rgba(255,224,158,1) 100%);; */
-    background-color: rgba(255,224,158,0.50);
+    background-color: rgba(255,224,158,1);
     padding: 5px;
     text-align: center;
 }
