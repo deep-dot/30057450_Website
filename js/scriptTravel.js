@@ -1,32 +1,20 @@
-document.addEventListener('DOMContentLoaded', function () {
-    var currentIndex = 0;
-    var images = document.querySelectorAll('.carousel-image');
-    var prevButton = document.querySelector('.prev');
-    var nextButton = document.querySelector('.next');
-    const descriptions = document.querySelectorAll('.description');
 
-    function showImage(index) {
-        images.forEach((image, i) => {
-            if (i === index) {
-                image.classList.add('active');
-                 descriptions[i].style.display = 'block';
-            } else {
-                image.classList.remove('active');
-                 descriptions[i].style.display = 'none';
-            }
-        });
-    }
 
-    prevButton.addEventListener('click', function () {
-        currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
-        showImage(currentIndex);
-    });
+const buttons = document.querySelectorAll("[data-carousel-button]")
 
-    nextButton.addEventListener('click', function () {
-        currentIndex = (currentIndex + 1) % images.length;
-        showImage(currentIndex);
-    });
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    const offset = button.dataset.carouselButton === "next" ? 1 : -1
+    const slides = button
+      .closest("[data-carousel]")
+      .querySelector("[data-slides]")
 
-    showImage(currentIndex);
-});
+    const activeSlide = slides.querySelector("[data-active]")
+    let newIndex = [...slides.children].indexOf(activeSlide) + offset
+    if (newIndex < 0) newIndex = slides.children.length - 1
+    if (newIndex >= slides.children.length) newIndex = 0
 
+    slides.children[newIndex].dataset.active = true
+    delete activeSlide.dataset.active
+  })
+})
