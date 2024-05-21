@@ -66,7 +66,7 @@ html {
     --heading3Weight: 400;
 
     --textSize: clamp(1rem, 2vw, 1.15rem);
-    --textFamily: 'Open Sans', sans-serif;
+    --textFamily: Georgia, 'Times New Roman', Times, serif;
     --textColor: #000000;
     --textWeight: 300;
 }
@@ -77,8 +77,10 @@ html {
 
 body {
     /* font-family: 'Open Sans', sans-serif; */
-
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
 }
 
 html, body {

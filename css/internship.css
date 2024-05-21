@@ -1,0 +1,74 @@
+
+
+.internship {
+    display: flex;
+    flex-direction: column;
+   
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.internship > p {
+    align-self: center;
+}
+.company1 {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    gap: 1em;
+    margin: 0 0 20px 0;
+}
+.aboutCompany {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;  
+}
+
+.aboutCompany > img {
+    width: 60%;
+    height: auto;
+}
+
+.internDescription {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;    
+}
+
+.internDescription > p {
+    flex: 1;
+    padding: 20px;
+}
+
+.internDescription .details {
+    flex: 1;
+    text-align: right;
+    padding: 20px;
+}
+
+.detail {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-bottom: solid 1px black;
+}
+
+.detail strong {
+    color: #666666;
+}
+
+@media (max-width: 768px) {
+
+    .company1 {
+        flex-direction: column;
+    }
+
+    .aboutCompany > img {
+        width: 100%;
+    }
+    
+}
