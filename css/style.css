@@ -85,12 +85,9 @@ body {
 
 html, body {
     position: relative;
-    max-height: 100vh;
     margin: 0;
     padding: 0;
-    width: 100vw; /* Ensures the body takes full width */
-    height: 100vh; /* Optional: Ensures the body takes full height */
-    overflow-x: hidden; /* Prevents horizontal scrolling */
+    overflow-x: hidden; 
     background-color: rgba(255,224,158,0.10);
 }
 
@@ -158,14 +155,13 @@ button:hover, a:hover {
 }
 
 
-
-
 /* FOOTER */
 footer {
     position:sticky;
     bottom:0;
     left:0;    
     width: 100%;
+    min-height: var(--footerHeight);
     /* background: linear-gradient(0deg, rgba(153,134,95,1) 0%, rgba(255,224,158,1) 100%);; */
     background-color: rgba(255,224,158,1);
     text-align: center;

@@ -24,22 +24,22 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    position: relative; /* Required to stack above the pseudo-element */
+    position: relative; 
 }
 
 .right-section {
-    flex: 1; /* Takes up full space available in its parent container */
+    flex: 1; 
     display: flex;
-    flex-direction: column; /* Stacks children vertically */
+    flex-direction: column; 
     position: relative;
 }
 
 .right-section .top-image, .right-section .bottom-text {
-    flex: 1; /* Each child will take an equal portion of the right-section's height */
+    flex: 1; 
     display: flex;
-    align-items: center; /* Center content vertically */
-    justify-content: center; /* Center content horizontally */
-    padding: 20px; /* Add padding for better spacing of the content */
+    align-items: center; 
+    justify-content: center; 
+    padding: 20px; 
 }
 
 .content {
@@ -54,31 +54,31 @@
 .content, .text-content {
     margin: auto;
     text-align: center;
-    width: 80%; /* Adjust width as needed */
+    width: 80%; 
     padding: 20px;
 }
 
 .top-image img {
     width: 40%;
     height: 80%;
-    display: block; /* This ensures no extra space below the image */
+    display: block; 
 }
 
 .bottom-text {
     flex-grow: 1;
     display: flex;
-    align-items: center; /* Centers vertically in the div */
-    justify-content: center; /* Centers horizontally */
+    align-items: center; 
+    justify-content: center; 
 }
 
-@media (max-width: 768px) { /* For tablet and below */
+@media (max-width: 768px) { 
     .main-section, .left-section, .right-section {
-        flex-direction: column; /* Stack elements vertically for smaller screens */
+        flex-direction: column; 
     }
 
     .top-image img {
         width: 50%;
-        height: auto; /* Maintain aspect ratio */
+        height: auto; 
     } 
     
     .bottom-text {
