@@ -1,36 +1,46 @@
-document.getElementById('load-more-btn').addEventListener('click', function() {
-    // Get the membership section
-    var membershipSection = document.querySelector('.membership-cards');
-    
-    // Add new memberships (example)
-    var newmemberships = `
-      <div class="card">
-        <div class="stars">★★★★★</div>
-        <p>Proin ultricies quam et lacus varius pharetra. Nulla facilisi. Praesent eu mauris nunc.</p>
-        <div class="user-info">
-          <img src="/images/profilepic.png" alt="User 4">
-          <p>User 4</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="stars">★★★★★</div>
-        <p>Suspendisse ac risus et nulla congue ullamcorper. Duis vel dui at eros vehicula finibus eu vel arcu.</p>
-        <div class="user-info">
-          <img src="user5.jpg" alt="User 5">
-          <p>User 5</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="stars">★★★★★</div>
-        <p>Etiam euismod, nisi ut blandit sollicitudin, ligula magna venenatis urna, ac ultricies est libero vitae lorem.</p>
-        <div class="user-info">
-          <img src="user6.jpg" alt="User 6">
-          <p>User 6</p>
-        </div>
-      </div>
-    `;
-    
-    // Append new memberships to the membership section
-    membershipSection.innerHTML += newmemberships;
-  });
-  
+
+const membershipsData = [
+{
+    "name": "Federation University Ballarat",
+    "description": "Currently pursuing a Bachelor's Degree in Information Technology, focusing on software development and data structures.",
+    "website": "https://federation.edu.au/",
+     "logo": "https://federation.edu.au/__data/assets/image/0011/466859/FED_colour_logo_large.png"
+},
+
+  {
+      "name": "Freelance Platform Deedeveloper.com",
+      "description": "A platform providing design, development, and consulting services to those in need within the IT industry.",
+      "website": "http://deedeveloper.com",
+      "logo": "../images/logo.png"
+  },
+
+    {
+        "name": "Professional Software Developers Association",
+        "description": "An organization dedicated to advancing the skills of software developers through conferences, workshops, and resources.",
+        "website": "https://www.psda.org",
+        "logo": "../images/PSDA.png"
+    },
+    {
+        "name": "Web Designers Forum",
+        "description": "A community for web designers and developers to share knowledge, trends, tools, and best practices.",
+        "website": "https://www.webdesignforum.com",
+        "logo": "../images/webDesignForum.png"
+    }
+];
+function renderMemberships() {
+    const container = document.getElementById('memberships-container');
+    membershipsData.forEach(item => {
+        const section = document.createElement('div');
+        section.className = 'membership';
+        section.innerHTML = `
+            <img src="${item.logo}" alt="Organization Logo">
+            <div>
+                <h2>${item.name}</h2>
+                <p>${item.description}</p>
+                <a href="${item.website}">Visit Website</a>
+            </div>
+        `;
+        container.appendChild(section);
+    });
+}
+document.addEventListener('DOMContentLoaded', renderMemberships);
