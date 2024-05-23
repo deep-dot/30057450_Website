@@ -17,19 +17,17 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 function initNavbar() {
   var navbar = document.querySelector('.navbar');
-  console.log('navbar===', navbar);
   var more = document.querySelector('.more > a');
-  console.log('more===', more);
   var dropdown = document.querySelector('.more .dropdown-content');
 
   var navsection = document.querySelector('.navsection');
-  var bodyContent = document.querySelector('.body-content');
+  var mainSection = document.querySelector('.main-section');
 
   function closeDropdown() {
     dropdown.style.display = 'none';
     navbar.style.background = 'linear-gradient(180deg, rgba(153,134,95,1) 0%, rgba(255,224,158,1) 50%)';
     navsection.style.background = 'linear-gradient(180deg, rgba(153,134,95,1) 0%, rgba(255,224,158,1) 50%)';
-    bodyContent.style.paddingTop = 0;
+    mainSection.style.paddingTop = 0;
   }
 
   more.addEventListener('click', function (event) {
@@ -43,7 +41,7 @@ function initNavbar() {
       navbar.style.background = 'linear-gradient(180deg, rgba(153,134,95,1) 100%, rgba(255,224,158,1) 15%)';
       navsection.style.background = 'linear-gradient(180deg, rgba(153,134,95,1) 100%, rgba(255,224,158,1) 15%)';
       let height = navbar.offsetHeight;
-      bodyContent.style.paddingTop = `${height}px`;
+      mainSection.style.paddingTop = `${height}px`;
     }
   });
 

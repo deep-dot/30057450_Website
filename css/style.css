@@ -1,14 +1,28 @@
 
 
-/* Base style */
-html {
-    font-size: 18px;
+/* Base styles that apply globally */
+* {
+    box-sizing: border-box; 
 }
+
+html, body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+    background-color: rgba(255, 224, 158, 0.1); 
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    font-size: 18px; 
+    line-height: 1.5; 
+    letter-spacing: 2px; 
+}
+
 .main-section {
-    width: 100%; /* Full width by default */
-    max-width: var(--pageWidth); /* Maximum width to control layout on large screens */
-    margin: 0 auto; /* Center the container horizontally */
-    padding: 0px; /* Default padding */
+    transition: var(--navbarHeight) 0.3s ease;
+    width: 100%;
+    max-width: var(--pageWidth);
+    margin: 0 auto;
+    padding: 0px;
 }
 
 /* Adjustments for smaller devices below the max-width of the container */
@@ -17,7 +31,7 @@ html {
         font-size: 16px;
     }
     .main-section {
-        padding: 15px; /* Slightly reduced padding for smaller devices */
+        padding: 15px;
     }
 }
 
@@ -27,7 +41,7 @@ html {
         font-size: 14px;
     }
     .main-section {
-        padding: 10px; /* Even smaller padding for mobile devices */
+        padding: 10px;
     }
 }
 
@@ -37,11 +51,9 @@ html {
         font-size: 12px;
     }
     .main-section {
-        padding: 5px; /* Minimal padding for very small screens */
+        padding: 5px; 
     }
 }
-
-
 
 :root {
     --pageWidth: 1440px;
@@ -50,17 +62,17 @@ html {
     --buttonBackGround: #9EBDFF;
     --buttonHover: #FFE09E;
 
-    --headingSize: clamp(1.75rem, 5vw, 2.25rem); /* h1 size */
+    --headingSize: clamp(1.75rem, 5vw, 2.25rem);
     --headingFamily: 'Raleway', sans-serif;
     --headingColor: #0462A6;
     --headingWeight: 600;
 
-    --heading2Size: clamp(1.50rem, 3vw, 1.75rem); /* h2 size */
+    --heading2Size: clamp(1.50rem, 3vw, 1.75rem);
     --heading2Family: 'Raleway', sans-serif;
     --heading2Color: #0462A6;
     --heading2Weight: 500;
 
-    --heading3Size: clamp(1.10rem, 2.25vw, 1.25rem); /* h3 size */
+    --heading3Size: clamp(1.10rem, 2.25vw, 1.25rem);
     --heading3Family: 'Raleway', sans-serif;
     --heading3Color: #0462A6;
     --heading3Weight: 400;
@@ -69,30 +81,6 @@ html {
     --textFamily: Georgia, 'Times New Roman', Times, serif;
     --textColor: #000000;
     --textWeight: 300;
-}
-
-* {
-    box-sizing: border-box; /* Makes sure padding and borders are included in the total width and height */
-}
-
-body {
-    /* font-family: 'Open Sans', sans-serif; */
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    line-height: 1.5;
-    letter-spacing: 2px;
-    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-}
-
-html, body {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; 
-    background-color: rgba(255,224,158,0.10);
-}
-
-.body-content {
-    transition: var(--navbarHeight) 0.3s ease; /* Smooth transition for padding adjustment */
 }
 
 h1 {
