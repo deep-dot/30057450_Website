@@ -60,7 +60,7 @@ html, body {
     --navbarHeight: 5em;  
     --footerHeight: 10rem;
     --buttonBackGround: #9EBDFF;
-    --buttonHover: #FFE09E;
+    --buttonHover: #ffe09e;
 
     --headingSize: clamp(1.75rem, 5vw, 2.25rem);
     --headingFamily: 'Raleway', sans-serif;

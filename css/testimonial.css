@@ -25,14 +25,13 @@ body{
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    /* flex-grow: 1; */
   }
   
   .card {
-    /* flex: 1; */
-    /* min-width: fit-content; */
+    display: flex;
+    flex-direction: column;
     width: calc(33.33% - 20px);
-    min-height: 300px;
+    min-height: 250px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
     padding: 15px;
@@ -48,35 +47,28 @@ body{
   .card img {
     width: 4em;
     height: 4em;
+    border-radius: 50px;
   }
 
   .card .user-info {
     display: flex;
     flex-direction: row;
     justify-content:flex-start;
-    align-items: center;
+    align-items: center;    
     gap: 10px;
+    margin-top: auto;
   }
   
   .load-more {
     text-align: center;
     margin-top: 30px;
   }
-  
-  @media (max-width: 1024) {
-    
-  }
 
-  @media (max-width: 768) {
-
-  }
-
-  /* @media (max-width: 480px) {
+  @media (max-width: 768px) {
     .testimonial-cards {
         flex-direction: column;
-        justify-content: center;
       }
       .card {
         width: 90%;
       }
-  } */
+  }
