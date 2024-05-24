@@ -17,6 +17,16 @@ document.addEventListener('DOMContentLoaded', () => {
             setupNavigation();
         });
 
+    const pageTitles = {
+        'index.html': 'Home - Deedeveloper.com',
+        'testimonial.html': 'Testimonial - Deedeveloper.com',
+        'gallery.html': 'Gallery - Deedeveloper.com',
+        'skill.html': 'Skills - Deedeveloper.com',
+        'travel.html': 'Travel - Deedeveloper.com',
+        'internship.html': 'Internship - Deedeveloper.com',
+        'membership.html': 'Membership - Deedeveloper.com',
+        'contact.html': 'Contact - Deedeveloper.com'
+    };
     function loadPage(page) {
         fetch(page)
             .then(response => response.text())
@@ -25,6 +35,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 tempDiv.innerHTML = data;
                 const pageContent = tempDiv.querySelector('main') ? tempDiv.querySelector('main').innerHTML : data;
                 document.getElementById('content').innerHTML = pageContent;
+
+                document.title = pageTitles[page] || 'Deedeveloper.com';
+
                 if (page === 'membership.html') {
                     renderMemberships();
                 }
@@ -61,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
         function closeDropdown() {
             dropdown.style.display = 'none';
             // navbar.style.background = 'linear-gradient(180deg, rgba(153,134,95,1) 0%, rgba(255,224,158,1) 50%)';
-             navsection.style.background = 'linear-gradient(180deg, rgba(153,134,95,1) 0%, rgba(255,224,158,1) 50%)';
+            navsection.style.background = 'linear-gradient(180deg, rgba(153,134,95,1) 0%, rgba(255,224,158,1) 50%)';
             mainSection.style.paddingTop = 0;
         }
 
@@ -135,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         ];
 
-        container.innerHTML = ''; 
+        container.innerHTML = '';
         membershipsData.forEach(item => {
             const section = document.createElement('div');
             section.className = 'membership';
@@ -147,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
                   <a href="${item.website}">Visit Website</a>
               </div>
           `;
-            container.appendChild(section); 
+            container.appendChild(section);
         });
     }
 
