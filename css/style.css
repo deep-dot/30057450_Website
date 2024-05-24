@@ -144,7 +144,6 @@ button:hover, a:hover {
 
 
 /* Navbar */
-
 .navsection{
     display: flex;
     justify-content: center;
@@ -266,85 +265,7 @@ button:hover, a:hover {
     background-color: #333;
 }
 
-@media (max-width: 1026px) {
-
-    .navbar .logo {
-        width: 20vw; 
-    }
-    .nav-links li {
-        padding: 0 10px; 
-    }
-}
-
-@media (min-width: 768px) {
-
-    .navsection .navbar {
-        padding: 5px;
-    }
-
-}
-
-@media (max-width: 480px) {
-
-    .logo {
-        width: 20vw; 
-    }
-
-    .nav-links {
-        display: none; 
-    }
-
-    .navbar {
-        padding: 5px;
-    }
-
-    .nav-button button {
-        width: 100vw; 
-    }
-
-    .navbar.active {
-        background-color: #0462A6;
-    }
-
-    .nav-links.active {
-        display: flex; 
-        flex-direction: column;
-        /* align-items: flex-start;  */
-        width: 100%; 
-        position: absolute;
-        
-        background: linear-gradient(360deg, rgba(153,134,95,1) 0%, rgba(255,224,158,1) 70%);
-        top: 100%; 
-        left: 0; 
-        z-index: 10; 
-        padding: 20px;
-        margin: 0;
-    }
-
-    .nav-links.active .dropdown-content {
-        background: none;
-        position: relative;    
-    }
-    .nav-links.active .dropdown-content > div:first-child {
-        flex-direction: column; 
-        align-items: flex-start;
-        padding: 0 0 0 40px;
-        gap: 1em;
-    }
-
-    .nav-links.active .nav-sublinks {
-        flex-direction: column;
-        gap: 5px
-    }
-
-    .burger {
-        display: block; 
-    }
-}
-
-
 /* Index */
-
 .index-section {
     display: flex;
     position: relative;
@@ -417,33 +338,6 @@ button:hover, a:hover {
     justify-content: center; 
 }
 
-@media (max-width: 768px) { 
-    .index-section, .left-section, .right-section {
-        flex-direction: column; 
-    }
-
-    .top-image img {
-        width: 50%;
-        height: auto; 
-    } 
-    
-    .bottom-text {
-        width: 100%; 
-    }
-}
-
-@media (max-width: 480px) { 
-    .content, .text-content {
-        width: 100%; 
-    }
-
-    .top-image img {
-        width: 80%; 
-        height: auto; 
-    }
-}
-
-
 /* Styles for membership page */
 .membership-container {
     min-height: 75vh;
@@ -501,33 +395,8 @@ button:hover, a:hover {
       text-align: center;
       margin-top: 30px;
     }
-    
-    @media (min-width: 768px) and (max-width: 1024px) {
-        .membership{
-            min-height: 20vh;
-        }
-      }
-      
-      @media (min-width: 480px) and (max-width: 767px) {
-        .membership {
-          min-height: 35vh;
-        }
-      }
-      
-  
-    @media (max-width: 479px) {
-      .membership-container {
-          flex-direction: column;
-          justify-content: center;
-        }
-        .membership {
-          width: 90%;
-        }
-    }
-
 
 /* contact */
-
 .container {    
     display: flex;
     justify-content: center;
@@ -625,37 +494,7 @@ input[type="submit"] {
     width: 100%;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-
-    .container {
-        min-height: 100vh;
-    }
-
-}
-
-
-@media (max-width: 768px) {
-
-    .container {
-        min-height: 75vh;
-    }
-
-    .main-contact-section{
-        padding: 0 10px;
-    }
-
-    .main-contact-section .section2 {
-        flex-direction: column;
-    }
-
-    .main-contact-section .section2 img {
-        display: none;
-    }
-
-}
-
 /* internship */
-
 .internship {
     display: flex;
     flex-direction: column;
@@ -724,24 +563,10 @@ input[type="submit"] {
     color: #666666;
 }
 
-@media (max-width: 768px) {
-
-    .company1, .company2, .company3 {
-        flex-direction: column;
-    }
-
-    .aboutCompany > img {
-        width: 100%;
-    }
-    
-}
-
-
 /* skill */
-
 /* https://youtu.be/EoN_4fv3T7A?si=g54lQRQ2I8IidY3c */
 
-  .skill-section {
+.skill-section {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -893,9 +718,7 @@ input[type="submit"] {
     }
 } 
 
-
 /* Gallery and travel */
-
 /* https://youtu.be/9HcxHDS2w1s?si=Z7ct9sWLpOH4MsbM */
 .gallery {
     display: flex;
@@ -986,24 +809,9 @@ input[type="submit"] {
   .carousel-button.next {
     right: 1rem;
   }
-  
-  @media (max-width: 468px) {
-    
-    .carousel {
-        width: 100vw;
-        height: 80vh;
-      }
-      .slide > img {
-        object-fit:fill;
-        height: auto;
-      }
-  }  
-
-
 
 /* Styles for testimonial page */
-
-  .testimonial-container {
+.testimonial-container {
     min-height: 75vh;
       max-width: var(--pageWidth);
       margin: 0 auto;
@@ -1070,15 +878,6 @@ input[type="submit"] {
       text-align: center;
       margin-top: 30px;
     }
-  
-    @media (max-width: 768px) {
-      .testimonial-cards {
-          flex-direction: column;
-        }
-        .card {
-          width: 90%;
-        }
-    }
 
 /* FOOTER */
 footer {
@@ -1131,13 +930,217 @@ footer {
     width: 25px;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* membership querry */
+    .membership{
+        min-height: 20vh;
+    }
 
-@media (max-width: 767px) {
+    /* contact */
+    .container {
+        min-height: 100vh;
+    }
+  }
+  
+@media (min-width: 480px) and (max-width: 767px) {
+    /* membership querry */
+    .membership {
+      min-height: 35vh;
+    }
+  }
+@media (max-width: 1026px) {
 
-    .footer-section .section1,
-    .footer-section .section2 {
-        flex-direction: column;
-        margin-bottom: 0px;
-        gap: 0em;
+    .navbar .logo {
+        width: 20vw; 
+    }
+    .nav-links li {
+        padding: 0 10px; 
     }
 }
+
+@media (min-width: 768px) {
+
+    /* navbar */
+    .navsection .navbar {
+        padding: 5px;
+    }
+
+    /* index */
+    .index-section, .left-section, .right-section {
+        flex-direction: column; 
+    }
+
+    .top-image img {
+        width: 50%;
+        height: auto; 
+    } 
+    
+    .bottom-text {
+        width: 100%; 
+    }
+
+    /* contact */
+    .container {
+        min-height: 75vh;
+    }
+
+    .main-contact-section{
+        padding: 0 10px;
+    }
+
+    .main-contact-section .section2 {
+        flex-direction: column;
+    }
+
+    .main-contact-section .section2 img {
+        display: none;
+    }
+
+    /* internship */
+    .company1, .company2, .company3 {
+        flex-direction: column;
+    }
+
+    .aboutCompany > img {
+        width: 100%;
+    }
+
+    /* Gallery and travel */
+
+
+    /* Styles for testimonial page */
+    .testimonial-cards {
+        flex-direction: column;
+      }
+      .card {
+        width: 90%;
+      }
+
+      /* FOOTER */
+
+      .footer-section .section1,
+      .footer-section .section2 {
+          flex-direction: column;
+          margin-bottom: 0px;
+          gap: 0em;
+      }
+
+}
+
+@media (max-width: 480px) {
+
+    /* navbar */
+
+    .logo {
+        width: 20vw; 
+    }
+
+    .nav-links {
+        display: none; 
+    }
+
+    .navbar {
+        padding: 5px;
+    }
+
+    .nav-button button {
+        width: 100vw; 
+    }
+
+    .navbar.active {
+        background-color: #0462A6;
+    }
+
+    .nav-links.active {
+        display: flex; 
+        flex-direction: column;
+        /* align-items: flex-start;  */
+        width: 100%; 
+        position: absolute;
+        
+        background: linear-gradient(360deg, rgba(153,134,95,1) 0%, rgba(255,224,158,1) 70%);
+        top: 100%; 
+        left: 0; 
+        z-index: 10; 
+        padding: 20px;
+        margin: 0;
+    }
+
+    .nav-links.active .dropdown-content {
+        background: none;
+        position: relative;    
+    }
+    .nav-links.active .dropdown-content > div:first-child {
+        flex-direction: column; 
+        align-items: flex-start;
+        padding: 0 0 0 40px;
+        gap: 1em;
+    }
+
+    .nav-links.active .nav-sublinks {
+        flex-direction: column;
+        gap: 5px
+    }
+
+    .burger {
+        display: block; 
+    }
+
+/* Index */
+    .content, .text-content {
+        width: 100%; 
+    }
+
+    .top-image img {
+        width: 80%; 
+        height: auto; 
+    }
+
+
+    /* Styles for membership page */
+    .membership-container {
+        flex-direction: column;
+        justify-content: center;
+      }
+      .membership {
+        width: 90%;
+      }
+
+    /* contact */
+
+/* skill */
+
+    /* travel and gallary */
+    .carousel {
+        width: 100vw;
+        height: 80vh;
+      }
+      .slide > img {
+        object-fit:fill;
+        height: auto;
+      }
+}
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
