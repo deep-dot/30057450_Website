@@ -1,4 +1,4 @@
-
+<!-- 
 <section class="navsection">
     <nav class="navbar">
         <div class="logo">
@@ -6,7 +6,6 @@
         <ul class="nav-links">
             <div class="nav-sublinks">
                 <li><a href="index.html">Home</a></li>
-                <!-- <li><a href="About.html">About</a></li> -->
                 <li><a href="testimonial.html">Testimonial</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li class="more">
@@ -27,7 +26,44 @@
             </div>
             <div class="nav-button">
                 <button onclick="location.href='contact.html'">Contact</button>
-                <!-- <button onclick="location.href='about.html'">About Me</button> -->
+            </div>
+        </ul>
+        <button class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+</section> -->
+
+
+<section class="navsection">
+    <nav class="navbar">
+        <div class="logo">
+        </div>
+        <ul class="nav-links">
+            <div class="nav-sublinks">
+                <li><a href="#" data-page="index.html">Home</a></li>
+                <li><a href="#" data-page="testimonial.html">Testimonial</a></li>
+                <li><a href="#" data-page="gallery.html">Gallery</a></li>
+                <li class="more">
+                    <a href="#">More</a>
+                    <div class="dropdown-content">
+                        <div>
+                            <a href="#" data-page="skill.html">Skills</a>
+                            <a href="#" data-page="travel.html">✈️ Travel</a>
+                            <a href="#" data-page="internship.html">💳 InternShip</a>
+                            <a href="#" data-page="membership.html">✅ MemberShip</a>
+                        </div>
+                        <div class="contact">
+                            <p>Get In Touch</p>
+                            <a href="#" data-page="contact.html">Contact Me</a>
+                        </div>
+                    </div>
+                </li>
+            </div>
+            <div class="nav-button">
+                <button onclick="loadPage('contact.html')">Contact</button>
             </div>
         </ul>
         <button class="burger">
