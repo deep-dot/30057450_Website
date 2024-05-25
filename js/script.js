@@ -192,6 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return true;
         }
 
+        // https://javascript.plainenglish.io/how-to-validate-an-email-address-in-javascript-4d5e04c9d008
         function validateEmail(email) {
             const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             return re.test(email.toLowerCase());
@@ -212,7 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // https://youtu.be/9HcxHDS2w1s?si=ETG_vFFcGGIEI1RQ
     function initCarousel() {
         const buttons = document.querySelectorAll("[data-carousel-button]");
-        console.log('buttons==', buttons);
+        
         buttons.forEach(button => {
             button.addEventListener("click", () => {
                 const offset = button.dataset.carouselButton === "next" ? 1 : -1;
