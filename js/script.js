@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
             setupNavigation();
             initNavbar();
             burgerMenu();
-        });
+        }); 
 
     fetch('../files/partials/footer.html')
         .then(response => response.text())
@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'sitemap.html': 'Site map - Deedevelper.com'
     };
     function loadPage(page) {
+        // addToHistory = true
         fetch(page)
             .then(response => response.text())
             .then(data => {
@@ -48,6 +49,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (page === 'gallery.html' || page === 'travel.html') {
                     initCarousel();
                 }
+                // if (addToHistory) {
+                //     history.pushState({ page }, document.title, page);
+                // }
             })
             .catch(error => console.error('Error loading page:', error));
     }
@@ -60,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 event.preventDefault();
                 const page = target.getAttribute('data-page');
                 if (page) {
-                    loadPage(page);
+                    loadPage(page);                    
                 }
             }
         });
@@ -75,7 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         function closeDropdown() {
             dropdown.style.display = 'none';
-            // navbar.style.background = 'linear-gradient(180deg, rgba(153,134,95,1) 0%, rgba(255,224,158,1) 50%)';
             navsection.style.background = 'linear-gradient(180deg, rgba(153,134,95,1) 0%, rgba(255,224,158,1) 50%)';
             mainSection.style.paddingTop = 0;
         }
@@ -108,10 +111,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (navLinks.classList.contains('active')) {
                     navLinks.style.width = '100%';
-                    // navLinks.style.left = '0';
                 } else {
                     navLinks.style.width = '';
-                    // navLinks.style.left = '';
                 }
             });
         } else {
@@ -232,6 +233,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    setupNavigation(); // Ensure initial setup for sitemap links
+    setupNavigation(); 
     loadPage('index.html');
 });
