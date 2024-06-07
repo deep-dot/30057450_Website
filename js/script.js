@@ -36,14 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 tempDiv.innerHTML = data;
                 const pageContent = tempDiv.querySelector('main') ? tempDiv.querySelector('main').innerHTML : data;
                 document.getElementById('content').innerHTML = pageContent;
-
-                // Dynamically add CSS if it's missing
-                if (!document.querySelector('link[href="../css/style.css"]')) {
-                    const link = document.createElement('link');
-                    link.rel = 'stylesheet';
-                    link.href = '../css/style.css';
-                    document.head.appendChild(link);
-                }
                 
                 document.title = pageTitles[page] || 'Deedeveloper.com';
 
@@ -61,16 +53,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function setupNavigation() {
-        const links = document.querySelectorAll('.nav-links a, .nav-button button, .footer-section .links a, .sitemap-container ul li a');
-        console.log('sitmap links===', links);
-        links.forEach(link => {
-            link.addEventListener('click', (event) => {
-                const page = link.getAttribute('data-page') || link.getAttribute('onclick').split("'")[1];
+        const container = document.querySelector('body');
+        container.addEventListener('click', (event) => {
+            const target = event.target.closest('[data-page]');
+            if (target) {
+                event.preventDefault();
+                const page = target.getAttribute('data-page');
                 if (page) {
-                    event.preventDefault();
                     loadPage(page);
                 }
-            });
+            }
         });
     }
 
@@ -240,5 +232,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    setupNavigation(); // Ensure initial setup for sitemap links
     loadPage('index.html');
 });
