@@ -1,7 +1,7 @@
 
 // https://www.digitalocean.com/community/tutorials/how-to-use-the-javascript-fetch-api-to-get-data
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('./partials/navbar.html')
+    fetch('../files/partials/navbar.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('nav-placeholder').innerHTML = data;
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
             burgerMenu();
         });
 
-    fetch('./partials/footer.html')
+    fetch('../files/partials/footer.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('footer-placeholder').innerHTML = data;
@@ -25,7 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
         'travel.html': 'Travel - Deedeveloper.com',
         'internship.html': 'Internship - Deedeveloper.com',
         'membership.html': 'Membership - Deedeveloper.com',
-        'contact.html': 'Contact - Deedeveloper.com'
+        'contact.html': 'Contact - Deedeveloper.com',
+        'sitemap.html': 'Site map - Deedevelper.com'
     };
     function loadPage(page) {
         fetch(page)
@@ -36,6 +37,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 const pageContent = tempDiv.querySelector('main') ? tempDiv.querySelector('main').innerHTML : data;
                 document.getElementById('content').innerHTML = pageContent;
 
+                // Dynamically add CSS if it's missing
+                if (!document.querySelector('link[href="../css/style.css"]')) {
+                    const link = document.createElement('link');
+                    link.rel = 'stylesheet';
+                    link.href = '../css/style.css';
+                    document.head.appendChild(link);
+                }
+                
                 document.title = pageTitles[page] || 'Deedeveloper.com';
 
                 if (page === 'membership.html') {
@@ -52,7 +61,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function setupNavigation() {
-        const links = document.querySelectorAll('.nav-links a, .nav-button button, .footer-section .links a');
+        const links = document.querySelectorAll('.nav-links a, .nav-button button, .footer-section .links a, .sitemap-container ul li a');
+        console.log('sitmap links===', links);
         links.forEach(link => {
             link.addEventListener('click', (event) => {
                 const page = link.getAttribute('data-page') || link.getAttribute('onclick').split("'")[1];
