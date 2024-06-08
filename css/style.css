@@ -252,7 +252,7 @@ html, body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('/images/HomeBackGroundImage.png'); 
+    background-image: url('../images/HomeBackGroundImage.png'); 
     background-size: contain; 
     background-repeat: no-repeat; 
     background-position: center;
@@ -1090,15 +1090,16 @@ footer {
 
     /* contact */
 
-/* skill */
+    /* skill */
 
     /* travel and gallary */
     .carousel {
         width: 100vw;
-        height: 80vh;
+        max-height: 80vh;
       }
       .slide > img {
-        object-fit:fill;
+        max-height: 60vh;
+        object-fit:contain;
         height: auto;
       }
 }
