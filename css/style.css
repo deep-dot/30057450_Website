@@ -144,7 +144,7 @@ html, body {
 .navbar .logo {
     width: 25vw;  
     height: var(--navbarHeight); 
-    background-image: url('/images/logo.png');
+    background-image: url('../images/logo.png');
     background-size: contain; 
     background-repeat: no-repeat; 
     background-position: center; 
@@ -513,19 +513,6 @@ html, body {
 /* skill */
 /* https://youtu.be/EoN_4fv3T7A?si=g54lQRQ2I8IidY3c */
 
-/* .skill-section {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    align-items: center;
-    min-height: calc(100vh - calc(var(--navbarHeight) + var(--footerHeight)));
-    width: 100%;
-    background-image: url('https://source.unsplash.com/78A265wPiO4'); 
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    background-position: center;
-} */
-
 .skill-section {
     position: relative;
     min-height: 75vh;
@@ -709,8 +696,8 @@ html, body {
   }
   
   .carousel {
-    width: 80vw;
-    height: 80vh;
+    width: 90vw;
+    height: 90vh;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -915,7 +902,7 @@ footer {
 .Footerlogo {
     width: 10vw;  
     height: var(--navbarHeight); 
-    background-image: url('/images/logo.png');
+    background-image: url('../images/logo.png');
     background-size: contain; 
     background-repeat: no-repeat; 
     background-position: center; 
