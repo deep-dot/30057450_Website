@@ -513,26 +513,56 @@ html, body {
 /* skill */
 /* https://youtu.be/EoN_4fv3T7A?si=g54lQRQ2I8IidY3c */
 
-.skill-section {
+/* .skill-section {
     display: flex;
     flex-direction: column;
     position: relative;
     align-items: center;
     min-height: calc(100vh - calc(var(--navbarHeight) + var(--footerHeight)));
-
     width: 100%;
     background-image: url('https://source.unsplash.com/78A265wPiO4'); 
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center;
+} */
+
+.skill-section {
+    position: relative;
+    min-height: 75vh;
+    max-width: var(--pageWidth);
+    margin: 0 auto;
+    padding: 20px;   
+    width: 100%;
+    overflow: hidden;
 }
+
+.skill-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=3271&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3; /* Adjust the opacity value as needed */
+    z-index: -1;
+}
+
+.skill-section .content {
+    position: relative;
+    z-index: 1;
+}
+
   
 .skill-section h1{
     text-align: center;
 }
 
 .skill-section p {
-    color: wheat;
+    color: var(--textColor);
     text-transform: uppercase;
     margin: 5px;
     font-size: var(--textSize);
@@ -760,17 +790,35 @@ html, body {
   }
 
 /* Styles for testimonial page */
-.testimonial-container {
-    min-height: 75vh;
-      max-width: var(--pageWidth);
-      margin: 0 auto;
-      padding: 20px;   
 
-      width: 100%;
-      background-image: url('https://source.unsplash.com/ndN00KmbJ1c');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
+    .testimonial-container {
+        position: relative;
+        min-height: 75vh;
+        max-width: var(--pageWidth);
+        margin: 0 auto;
+        padding: 20px;   
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .testimonial-container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('https://media.istockphoto.com/id/1317094068/photo/5-stars-lying-on-a-wooden-board-dutch-angle-quality-concept.jpg?s=2048x2048&w=is&k=20&c=PaTKJjg0XydkZvZ5w3YxDR5g8IFsELdzhXZ9-utmdfg=');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        opacity: 0.3; 
+        z-index: -1;
+    }
+    
+    .testimonial-container .content {
+        position: relative;
+        z-index: 1;
     }
     
     .testimonial-container p {

@@ -1,75 +1,4 @@
-
-// https://www.digitalocean.com/community/tutorials/how-to-use-the-javascript-fetch-api-to-get-data
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('../files/partials/navbar.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('nav-placeholder').innerHTML = data;
-            setupNavigation();
-            initNavbar();
-            burgerMenu();
-        }); 
-
-    fetch('../files/partials/footer.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('footer-placeholder').innerHTML = data;
-            setupNavigation();
-        });
-
-    const pageTitles = {
-        'index.html': 'Home - Deedeveloper.com',
-        'testimonial.html': 'Testimonial - Deedeveloper.com',
-        'gallery.html': 'Gallery - Deedeveloper.com',
-        'skill.html': 'Skills - Deedeveloper.com',
-        'travel.html': 'Travel - Deedeveloper.com',
-        'internship.html': 'Internship - Deedeveloper.com',
-        'membership.html': 'Membership - Deedeveloper.com',
-        'contact.html': 'Contact - Deedeveloper.com',
-        'sitemap.html': 'Site map - Deedevelper.com'
-    };
-    function loadPage(page) {
-        // addToHistory = true
-        fetch(page)
-            .then(response => response.text())
-            .then(data => {
-                const tempDiv = document.createElement('div');
-                tempDiv.innerHTML = data;
-                const pageContent = tempDiv.querySelector('main') ? tempDiv.querySelector('main').innerHTML : data;
-                document.getElementById('content').innerHTML = pageContent;
-                
-                document.title = pageTitles[page] || 'Deedeveloper.com';
-
-                if (page === 'membership.html') {
-                    renderMemberships();
-                }
-                if (page === 'contact.html') {
-                    initContactForm();
-                }
-                if (page === 'gallery.html' || page === 'travel.html') {
-                    initCarousel();
-                }
-                // if (addToHistory) {
-                //     history.pushState({ page }, document.title, page);
-                // }
-            })
-            .catch(error => console.error('Error loading page:', error));
-    }
-
-    function setupNavigation() {
-        const container = document.querySelector('body');
-        container.addEventListener('click', (event) => {
-            const target = event.target.closest('[data-page]');
-            if (target) {
-                event.preventDefault();
-                const page = target.getAttribute('data-page');
-                if (page) {
-                    loadPage(page);                    
-                }
-            }
-        });
-    }
-
     function initNavbar() {
         const navbar = document.querySelector('.navbar');
         const more = document.querySelector('.more > a');
@@ -83,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
             mainSection.style.paddingTop = 0;
         }
 
-        // https://www.w3schools.com/js/js_htmldom_eventlistener.asp
         more.addEventListener('click', function (event) {
             event.preventDefault();
             event.stopPropagation();
@@ -120,8 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // render json data using html and javascript
-    // https://dizzpy.medium.com/how-to-connect-html-with-json-using-javascript-a-beginners-guide-25e94306fa0f
     function renderMemberships() {
         const container = document.getElementById('memberships-container');
         const membershipsData = [
@@ -167,7 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // https://www.codebrainer.com/blog/contact-form-in-javascript
     function initContactForm() {
         const form = document.querySelector('form');
         const nameInput = document.getElementById('name');
@@ -195,7 +120,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return true;
         }
 
-        // https://javascript.plainenglish.io/how-to-validate-an-email-address-in-javascript-4d5e04c9d008
         function validateEmail(email) {
             const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             return re.test(email.toLowerCase());
@@ -213,7 +137,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // https://youtu.be/9HcxHDS2w1s?si=ETG_vFFcGGIEI1RQ
     function initCarousel() {
         const buttons = document.querySelectorAll("[data-carousel-button]");
         
@@ -233,6 +156,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    setupNavigation(); 
-    loadPage('index.html');
+    initNavbar();
+    burgerMenu();
+
+    // Initialize other functionalities based on the current page
+    if (document.getElementById('memberships-container')) {
+        renderMemberships();
+    }
+    if (document.querySelector('form')) {
+        initContactForm();
+    }
+    if (document.querySelector('[data-carousel-button]')) {
+        initCarousel();
+    }
 });

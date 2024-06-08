@@ -1,38 +1,127 @@
-    
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!-- https://fonts.google.com/selection/embed -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&family=Merriweather:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <section class="navsection">
+        <nav class="navbar">
+            <div class="logo">
+            </div>
+            <ul class="nav-links">
+                <div class="nav-sublinks">
+                    <li><a href="index.html">🏡 Home</a></li>
+                    <li><a href="testimonial.html">☻ Testimonial</a></li>
+                    <li><a href="gallery.html">🂬 Gallery</a></li>
+                    <li class="more">
+                        <a href="#">More ⬇︎</a>
+                        <div class="dropdown-content">
+                            <div>
+                                <a href="skill.html">😎 Skills</a>
+                                <a href="travel.html">✈️ Travel</a>
+                                <a href="internship.html">💳 InternShip</a>
+                                <a href="membership.html">✅ MemberShip</a>
+                            </div>
+                            <div class="contact">
+                                <p>Get In Touch</p>
+                                <a href="contact.html">Contact Me</a>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+                <div class="nav-button">
+                    <button onclick="location.href='contact.html';">Contact</button>
+                </div>
+            </ul>
+            <button class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </section>
+
 <!-- https://youtu.be/9HcxHDS2w1s?si=Z7ct9sWLpOH4MsbM -->
-    <section class="gallery main-section">
-        <div class="galleryHeader">
-            <h1>Project Gallery</h1>
-            <p>Explore our impressive collection of work.</p>
+<section class="gallery main-section">
+  <div class="galleryHeader">
+      <h1>Project Gallery</h1>
+      <p>Explore our impressive collection of work.</p>
+  </div>
+  <div class="carousel" data-carousel>
+    <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
+    <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
+    <ul data-slides>
+      <li class="slide" data-active >              
+        <img src="../images/WF.png" alt="Nature Image #1">              
+        <p class="description">The Wage Figurer app for Android and iOS helps cabbies with their daily payment calculations and report creation.</p>
+      </li>
+      <li class="slide" >
+        <img src="../images/cabBooking.png" alt="Nature Image #1">
+        <p class="description">An across-platform cab ride project would help the public travel from one place to another at fair prices.</p>
+      </li>
+      <li class="slide" >
+        <img src="../images/deedeveloper.png" alt="Nature Image #2">
+        <p class="description">Deedeveloper.com a platform providing design, development, and consulting services to those in need within the IT industry.</p>
+      </li>
+      <li class="slide" >
+        <img src="../images/dietingApp.png" alt="Nature Image #3">
+        <p class="description">Comming soon.</p>
+      </li>
+      <li class="slide" >
+        <img src="../images/foodDeliveryApp.png" alt="Nature Image #3">
+        <p class="description">Food delivery cross platform app.</p>
+      </li>
+      <li class="slide" >
+        <img src="https://images.unsplash.com/photo-1615640848864-21d95c1dc365?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bXVzaWMlMjBhcHB8ZW58MHx8MHx8fDA%3D" alt="Nature Image #3">
+        <p class="description">Next Project Music App.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+    <footer>
+        <div class="footer-section">
+            <div class="section1">
+                <div class="Footerlogo">
+                </div>
+                <div class="links">
+                    <a href="skill.html">Skills</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="sitemap.html">Site map</a>
+                </div>
+                <div class="social-icons">
+                    <a href="#facebook"><img src="/images/icons/Facebook.png" width="15px" height="25px"
+                            alt="Facebook"></a>
+                    <a href="#twitter"><img src="/images/icons/lInkedIn.png" width="15px" height="25px"
+                            alt="Twitter"></a>
+                    <a href="#instagram"><img src="/images/icons/YouTube.png" width="15px" height="25px"
+                            alt="Instagram"></a>
+                </div>
+            </div>
+            <div class="section2">
+                <div class="copyright">
+                    &copy; 2024 Deedeveloper.com
+                </div>
+                <div class="legal">
+                    <a href="#privacy">Privacy Policy</a>
+                </div>
+            </div>
         </div>
-        <div class="carousel" data-carousel>
-          <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
-          <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
-          <ul data-slides>
-            <li class="slide" data-active >              
-              <img src="../images/WF.png" alt="Nature Image #1">              
-              <p class="description">The Wage Figurer app for Android and iOS helps cabbies with their daily payment calculations and report creation.</p>
-            </li>
-            <li class="slide" >
-              <img src="../images/cabBooking.png" alt="Nature Image #1">
-              <p class="description">An across-platform cab ride project would help the public travel from one place to another at fair prices.</p>
-            </li>
-            <li class="slide" >
-              <img src="../images/deedeveloper.png" alt="Nature Image #2">
-              <p class="description">Deedeveloper.com a platform providing design, development, and consulting services to those in need within the IT industry.</p>
-            </li>
-            <li class="slide" >
-              <img src="../images/dietingApp.png" alt="Nature Image #3">
-              <p class="description">Comming soon.</p>
-            </li>
-            <li class="slide" >
-              <img src="../images/foodDeliveryApp.png" alt="Nature Image #3">
-              <p class="description">Food delivery cross platform app.</p>
-            </li>
-            <li class="slide" >
-              <img src="https://images.unsplash.com/photo-1615640848864-21d95c1dc365?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bXVzaWMlMjBhcHB8ZW58MHx8MHx8fDA%3D" alt="Nature Image #3">
-              <p class="description">Next Project Music App.</p>
-            </li>
-          </ul>
-        </div>
-      </section>
+    </footer>
+
+    <script src="../js/script.js"></script>
+
+</body>
+
+</html>
+

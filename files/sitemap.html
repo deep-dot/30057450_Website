@@ -1,33 +1,122 @@
-<section class="sitemap-container main-section">
-    <h1>Sitemap</h1>
-    <h3>/30057450_Website</h3>
-    <div style="padding-left: 2em;">
-        <h3>/css</h3>
-        <ul>
-            <li><a href="#">style.css</a></li>
-        </ul>
-        <h3>/files</h3>
-        <ul>
-            <div style="padding-left: 2em;">
-                <h3>/partials</h3>
-                <ul style="padding-left: 2em;">
-                    <li><a href="#">navbar.html</a></li>
-                    <li><a href="#">footer.html</a></li>
-                </ul>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!-- https://fonts.google.com/selection/embed -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&family=Merriweather:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <section class="navsection">
+        <nav class="navbar">
+            <div class="logo">
             </div>
-            <li><a href="#" data-page="index.html">index.html</a></li>
-            <li><a href="#" data-page="testimonial.html">testimonial.html</a></li>
-            <li><a href="#" data-page="gallery.html">gallery.html</a></li>
-            <li><a href="#" data-page="contact.html">contact.html</a></li>
-            <li><a href="#" data-page="skill.html">skill.html</a></li>
-            <li><a href="#" data-page="travel.html">travel.html</a></li>
-            <li><a href="#" data-page="internship.html">internship.html</a></li>
-            <li><a href="#" data-page="membership.html">membership.html</a></li>
-            <li><a href="#" data-page="sitemap.html">sitemap.html</a></li>
-        </ul>
-        <h3>/js</h3>
-        <ul>
-            <li><a href="#">script.js</a></li>
-        </ul>
-    </div>
-</section>
+            <ul class="nav-links">
+                <div class="nav-sublinks">
+                    <li><a href="index.html">🏡 Home</a></li>
+                    <li><a href="testimonial.html">☻ Testimonial</a></li>
+                    <li><a href="gallery.html">🂬 Gallery</a></li>
+                    <li class="more">
+                        <a href="#">More ⬇︎</a>
+                        <div class="dropdown-content">
+                            <div>
+                                <a href="skill.html">😎 Skills</a>
+                                <a href="travel.html">✈️ Travel</a>
+                                <a href="internship.html">💳 InternShip</a>
+                                <a href="membership.html">✅ MemberShip</a>
+                            </div>
+                            <div class="contact">
+                                <p>Get In Touch</p>
+                                <a href="contact.html">Contact Me</a>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+                <div class="nav-button">
+                    <button onclick="location.href='contact.html';">Contact</button>
+                </div>
+            </ul>
+            <button class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </section>
+
+    <section class="sitemap-container main-section">
+        <h1>Sitemap</h1>
+        <h3>/30057450_Website</h3>
+        <div style="padding-left: 2em;">
+            <h3>/css</h3>
+            <ul>
+                <li><a href="#">style.css</a></li>
+            </ul>
+            <h3>/files</h3>
+            <ul>
+                <div style="padding-left: 2em;">
+                    <h3>/partials</h3>
+                    <ul style="padding-left: 2em;">
+                        <li><a href="#">navbar.html</a></li>
+                        <li><a href="#">footer.html</a></li>
+                    </ul>
+                </div>
+                <li><a href="index.html">index.html</a></li>
+                <li><a href="testimonial.html">testimonial.html</a></li>
+                <li><a href="gallery.html">gallery.html</a></li>
+                <li><a href="contact.html">contact.html</a></li>
+                <li><a href="skill.html">skill.html</a></li>
+                <li><a href="travel.html">travel.html</a></li>
+                <li><a href="internship.html">internship.html</a></li>
+                <li><a href="membership.html">membership.html</a></li>
+                <li><a href="sitemap.html">sitemap.html</a></li>
+            </ul>
+            <h3>/js</h3>
+            <ul>
+                <li><a href="#">script.js</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-section">
+            <div class="section1">
+                <div class="Footerlogo">
+                </div>
+                <div class="links">
+                    <a href="skill.html">Skills</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="sitemap.html">Site map</a>
+                </div>
+                <div class="social-icons">
+                    <a href="#facebook"><img src="/images/icons/Facebook.png" width="15px" height="25px"
+                            alt="Facebook"></a>
+                    <a href="#twitter"><img src="/images/icons/lInkedIn.png" width="15px" height="25px"
+                            alt="Twitter"></a>
+                    <a href="#instagram"><img src="/images/icons/YouTube.png" width="15px" height="25px"
+                            alt="Instagram"></a>
+                </div>
+            </div>
+            <div class="section2">
+                <div class="copyright">
+                    &copy; 2024 Deedeveloper.com
+                </div>
+                <div class="legal">
+                    <a href="#privacy">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+
+</body>
+
+</html>
