@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
             mainSection.style.paddingTop = 0;
         }
 
+         // https://www.w3schools.com/js/js_htmldom_eventlistener.asp
         more.addEventListener('click', function (event) {
             event.preventDefault();
             event.stopPropagation();
@@ -48,6 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // render json data using html and javascript
+    // https://dizzpy.medium.com/how-to-connect-html-with-json-using-javascript-a-beginners-guide-25e94306fa0f
     function renderMemberships() {
         const container = document.getElementById('memberships-container');
         const membershipsData = [
@@ -93,6 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // https://www.codebrainer.com/blog/contact-form-in-javascript
     function initContactForm() {
         const form = document.querySelector('form');
         const nameInput = document.getElementById('name');
@@ -120,6 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return true;
         }
 
+        // https://javascript.plainenglish.io/how-to-validate-an-email-address-in-javascript-4d5e04c9d008
         function validateEmail(email) {
             const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             return re.test(email.toLowerCase());
@@ -137,6 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    /* https://youtu.be/9HcxHDS2w1s?si=Z7ct9sWLpOH4MsbM */
     function initCarousel() {
         const buttons = document.querySelectorAll("[data-carousel-button]");
         
@@ -159,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initNavbar();
     burgerMenu();
 
-    // Initialize other functionalities based on the current page
+    
     if (document.getElementById('memberships-container')) {
         renderMemberships();
     }
